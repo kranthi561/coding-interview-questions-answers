@@ -10,28 +10,28 @@
 2. [Best Time to Buy and Sell Stock](https://github.com/kranthi561/coding-interview-questions-answers/blob/main/Arrays/02-best-time-to-buy-and-sell-stock.md)
   Find the maximum profit from a single buy-sell stock transaction.
    Single pass tracking the minimum price seen so far; profit at each step = current price − running minimum.
-3. [Contains Duplicate](https://github.com/kranthi561/coding-interview-questions-answers/blob/main/Arrays/contains-duplicate.md)
+3. [Contains Duplicate](https://github.com/kranthi561/coding-interview-questions-answers/blob/main/Arrays/03-contains-duplicate.md)
   Determine if any value appears more than once in an array.
    Insert elements into a hash set; if insertion fails the element is already present — return true immediately.
-4. [Product of Array Except Self](https://github.com/kranthi561/coding-interview-questions-answers/blob/main/Arrays/product-of-array-except-self.md)
+4. [Product of Array Except Self](https://github.com/kranthi561/coding-interview-questions-answers/blob/main/Arrays/04-product-of-array-except-self.md)
   Return an array where each index holds the product of all other elements, without using division.
    Two-pass prefix/suffix product approach: first pass builds left products, second pass multiplies in right products.
-5. [Maximum Subarray](https://github.com/kranthi561/coding-interview-questions-answers/blob/main/Arrays/maximum-subarray.md)
+5. [Maximum Subarray](https://github.com/kranthi561/coding-interview-questions-answers/blob/main/Arrays/05-maximum-subarray.md)
   Find the contiguous subarray that has the largest sum.
    Kadane's algorithm: at each position decide to extend the current subarray or start fresh — O(n) time, O(1) space.
-6. [Maximum Product Subarray](https://github.com/kranthi561/coding-interview-questions-answers/blob/main/Arrays/maximum-product-subarray.md)
+6. [Maximum Product Subarray](https://github.com/kranthi561/coding-interview-questions-answers/blob/main/Arrays/06-maximum-product-subarray.md)
   Find the contiguous subarray that has the largest product.
    Track both the current maximum and minimum product; a large negative minimum can become the new maximum when multiplied by another negative.
-7. [Find Minimum in Rotated Sorted Array](https://github.com/kranthi561/coding-interview-questions-answers/blob/main/Arrays/find-minimum-in-rotated-sorted-array.md)
+7. [Find Minimum in Rotated Sorted Array](https://github.com/kranthi561/coding-interview-questions-answers/blob/main/Arrays/07-find-minimum-in-rotated-sorted-array.md)
   Locate the minimum element in a sorted array rotated at an unknown pivot, in O(log n) time.
    Binary search compares the mid element to the right boundary; if mid > right, the minimum is in the right half.
-8. [Search in Rotated Sorted Array](https://github.com/kranthi561/coding-interview-questions-answers/blob/main/Arrays/search-in-rotated-sorted-array.md)
+8. [Search in Rotated Sorted Array](https://github.com/kranthi561/coding-interview-questions-answers/blob/main/Arrays/08-search-in-rotated-sorted-array.md)
   Find the index of a target value in a rotated sorted array or return -1, in O(log n) time.
    Modified binary search identifies the sorted half at each step and checks whether the target falls within it.
-9. [3Sum](https://github.com/kranthi561/coding-interview-questions-answers/blob/main/Arrays/3sum.md)
+9. [3Sum](https://github.com/kranthi561/coding-interview-questions-answers/blob/main/Arrays/09-3sum.md)
   Find all unique triplets in an array that sum to zero.
    Sort the array, fix one element per outer loop, then use two pointers on the remainder for an O(n²) solution with duplicate skipping.
-10. [Container With Most Water](https://github.com/kranthi561/coding-interview-questions-answers/blob/main/Arrays/container-with-most-water.md)
+10. [Container With Most Water](https://github.com/kranthi561/coding-interview-questions-answers/blob/main/Arrays/10-container-with-most-water.md)
   Find two lines that form the container that holds the most water.
     Two-pointer technique starts at the widest span and always moves the shorter pointer inward — the only direction area can possibly increase.
 
@@ -39,19 +39,19 @@
 
 ## 2. [Binary (5)](https://github.com/kranthi561/coding-interview-questions-answers/tree/main/Binary)
 
-1. [Sum of Two Integers](https://github.com/kranthi561/coding-interview-questions-answers/tree/main/Binary/sum-of-two-integers.md)
+1. [Sum of Two Integers](https://github.com/kranthi561/coding-interview-questions-answers/tree/main/Binary/01-sum-of-two-integers.md)
   Calculate the sum of two integers without using the `+` or `-` operators.
    XOR computes sum bits without carry; AND shifted left computes the carry; repeat until carry is zero.
-2. [Number of 1 Bits](https://github.com/kranthi561/coding-interview-questions-answers/tree/main/Binary/number-of-1-bits.md)
+2. [Number of 1 Bits](https://github.com/kranthi561/coding-interview-questions-answers/tree/main/Binary/02-number-of-1-bits.md)
   Count the number of set bits (1s) in the binary representation of an unsigned integer.
    `n & (n - 1)` clears the lowest set bit each iteration; count how many times this can be done before n reaches zero.
-3. [Counting Bits](https://github.com/kranthi561/coding-interview-questions-answers/tree/main/Binary/counting-bits.md)
+3. [Counting Bits](https://github.com/kranthi561/coding-interview-questions-answers/tree/main/Binary/03-counting-bits.md)
   Return an array where each index `i` holds the count of 1-bits in the binary representation of `i`, for all i from 0 to n.
    DP relation: `bits[i] = bits[i >> 1] + (i & 1)` — reuse the count of i shifted right, then add the last bit.
-4. [Missing Number](https://github.com/kranthi561/coding-interview-questions-answers/tree/main/Binary/missing-number.md)
+4. [Missing Number](https://github.com/kranthi561/coding-interview-questions-answers/tree/main/Binary/04-missing-number.md)
   Find the one missing number in an array containing n distinct values from the range [0, n].
    Gauss formula gives the expected sum `n*(n+1)/2`; subtract the actual array sum to find the missing value.
-5. [Reverse Bits](https://github.com/kranthi561/coding-interview-questions-answers/tree/main/Binary/reverse-bits.md)
+5. [Reverse Bits](https://github.com/kranthi561/coding-interview-questions-answers/tree/main/Binary/05-reverse-bits.md)
   Reverse the bits of a 32-bit unsigned integer.
    Process each bit from right to left: shift the result left by 1, OR in the current bit, then shift n right by 1 — repeat 32 times.
 
