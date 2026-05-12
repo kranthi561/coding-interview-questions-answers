@@ -2,8 +2,7 @@
 
 ---
 
-<details>
-<summary><strong>1. What is meant by Find Minimum in Rotated Sorted Array?</strong></summary>
+1. What is meant by Find Minimum in Rotated Sorted Array?
 
 ## What is Find Minimum in Rotated Sorted Array?
 
@@ -29,12 +28,10 @@ Output: 11
 Explanation: No rotation — array is already sorted.
 ```
 
-</details>
 
 ---
 
-<details>
-<summary><strong>2. Clarify Requirements</strong></summary>
+2. Clarify Requirements
 
 ## Requirements
 
@@ -55,12 +52,10 @@ Explanation: No rotation — array is already sorted.
 - What if not rotated at all? → Still works; return nums[0].
 - Can the array be empty? → Guaranteed at least one element.
 
-</details>
 
 ---
 
-<details>
-<summary><strong>3. Time and Space Complexity</strong></summary>
+3. Time and Space Complexity
 
 ## Complexity Analysis
 
@@ -71,12 +66,10 @@ Explanation: No rotation — array is already sorted.
 
 **Binary search** eliminates half the array each iteration using the invariant: the minimum lies in the unsorted half.
 
-</details>
 
 ---
 
-<details>
-<summary><strong>4. Algorithm Choice and Why</strong></summary>
+4. Algorithm Choice and Why
 
 ## Algorithm: Binary Search
 
@@ -94,12 +87,10 @@ The rotation creates exactly one "drop point" where the array goes from high to 
       drop (5→1) — minimum is to the right of here
 ```
 
-</details>
 
 ---
 
-<details>
-<summary><strong>5. High-Level Design</strong></summary>
+5. High-Level Design
 
 ## High-Level Design
 
@@ -128,12 +119,10 @@ Array:  3  4  5  1  2
              minimum
 ```
 
-</details>
 
 ---
 
-<details>
-<summary><strong>6. Java Solution with Explanation</strong></summary>
+6. Java Solution with Explanation
 
 ## Java Implementation
 
@@ -186,12 +175,10 @@ public class FindMinimumInRotatedSortedArray {
 1
 ```
 
-</details>
 
 ---
 
-<details>
-<summary><strong>7. Python Solution with Explanation</strong></summary>
+7. Python Solution with Explanation
 
 ## Python Implementation
 
@@ -235,12 +222,10 @@ if __name__ == "__main__":
 1
 ```
 
-</details>
 
 ---
 
-<details>
-<summary><strong>8. Interview Q&A</strong></summary>
+8. Interview Q&A
 
 ## Q&A
 
@@ -256,12 +241,10 @@ A: `nums[mid] <= nums[right]` is always true for a sorted array, so `right` conv
 **Q: How would you handle duplicates (LeetCode 154)?**  
 A: When `nums[mid] == nums[right]`, we can't determine which half is sorted. The safest approach is `right--`, falling back to O(n) worst case.
 
-</details>
 
 ---
 
-<details>
-<summary><strong>9. Summary</strong></summary>
+9. Summary
 
 ## Summary
 
@@ -273,4 +256,3 @@ A: When `nums[mid] == nums[right]`, we can't determine which half is sorted. The
 | **Space Complexity** | O(1) |
 | **Key Insight** | If `nums[mid] > nums[right]`, min is in right half; otherwise in left |
 
-</details>

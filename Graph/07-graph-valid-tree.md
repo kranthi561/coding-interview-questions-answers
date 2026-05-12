@@ -2,8 +2,7 @@
 
 ---
 
-<details>
-<summary><strong>1. What is meant by Graph Valid Tree?</strong></summary>
+1. What is meant by Graph Valid Tree?
 
 ## What is Graph Valid Tree?
 
@@ -29,12 +28,10 @@ Input:  n = 5, edges = [[0,1],[1,2],[2,3],[1,3],[1,4]]
 Output: false  (cycle: 1-2-3-1)
 ```
 
-</details>
 
 ---
 
-<details>
-<summary><strong>2. Clarify Requirements — Functional and Non-Functional</strong></summary>
+2. Clarify Requirements — Functional and Non-Functional
 
 ## Requirements
 
@@ -61,12 +58,10 @@ Output: false  (cycle: 1-2-3-1)
 - Can there be self-loops? → No (by convention).
 - Must all nodes be connected? → Yes, a tree is connected by definition.
 
-</details>
 
 ---
 
-<details>
-<summary><strong>3. Estimate Time and Space Complexity</strong></summary>
+3. Estimate Time and Space Complexity
 
 ## Complexity Analysis
 
@@ -91,12 +86,10 @@ A tree has **exactly `n-1` edges**. If the edge count differs, immediately retur
 
 This check alone doesn't guarantee a tree (must also be connected), but it eliminates many invalid inputs instantly.
 
-</details>
 
 ---
 
-<details>
-<summary><strong>4. Which Algorithm and Why?</strong></summary>
+4. Which Algorithm and Why?
 
 ## Algorithm: Union-Find
 
@@ -124,12 +117,10 @@ for each edge (u, v):
 return true  // n-1 edges + no cycle → tree
 ```
 
-</details>
 
 ---
 
-<details>
-<summary><strong>5. High-Level Design — Components and Data Flow</strong></summary>
+5. High-Level Design — Components and Data Flow
 
 ## High-Level Design
 
@@ -164,12 +155,10 @@ Process [1,2]: union → parent[2]=0
 Process [2,0]: find(2)=0, find(0)=0 → SAME → cycle → return false ✗
 ```
 
-</details>
 
 ---
 
-<details>
-<summary><strong>6. Java Solution with Comments and Examples</strong></summary>
+6. Java Solution with Comments and Examples
 
 ## Java Implementation
 
@@ -289,12 +278,10 @@ n=4, edges=[[0,1],[2,3]]
 Output: false
 ```
 
-</details>
 
 ---
 
-<details>
-<summary><strong>7. Python Solution with Comments and Examples</strong></summary>
+7. Python Solution with Comments and Examples
 
 ## Python Implementation
 
@@ -367,12 +354,10 @@ if __name__ == "__main__":
 [PASS] n=3, edges=[[0,1],[1,2]] → Output: True, Expected: True
 ```
 
-</details>
 
 ---
 
-<details>
-<summary><strong>8. Interview Questions and Answers</strong></summary>
+8. Interview Questions and Answers
 
 ## Q&A
 
@@ -394,12 +379,10 @@ A: A single node with no edges is a valid tree. `edges.length = 0 = n-1 = 0`. Un
 **Q: How would you handle a directed graph version?**
 A: For a directed tree (rooted tree), each node except the root has exactly one parent. Check: each non-root has exactly one incoming edge, and there are no cycles (DFS with 3-state coloring).
 
-</details>
 
 ---
 
-<details>
-<summary><strong>9. Summary</strong></summary>
+9. Summary
 
 ## Summary
 
@@ -421,4 +404,3 @@ A: For a directed tree (rooted tree), each node except the root has exactly one 
 - Cycle detection in undirected graphs.
 - Related: Number of Connected Components, Redundant Connection, Minimum Spanning Tree (Kruskal's).
 
-</details>

@@ -2,8 +2,7 @@
 
 ---
 
-<details>
-<summary><strong>1. What is meant by Coin Change?</strong></summary>
+1. What is meant by Coin Change?
 
 ## What is Coin Change?
 
@@ -28,12 +27,10 @@ Output: 3
 Explanation: 25 + 10 + 1 = 36 (3 coins)
 ```
 
-</details>
 
 ---
 
-<details>
-<summary><strong>2. Clarify Requirements — Functional and Non-Functional</strong></summary>
+2. Clarify Requirements — Functional and Non-Functional
 
 ## Requirements
 
@@ -59,12 +56,10 @@ Explanation: 25 + 10 + 1 = 36 (3 coins)
 - Are coin values always positive? → Yes.
 - Is greedy always optimal? → No (e.g., coins=[1,3,4], amount=6: greedy picks 4+1+1=3 coins, DP finds 3+3=2 coins).
 
-</details>
 
 ---
 
-<details>
-<summary><strong>3. Estimate Time and Space Complexity</strong></summary>
+3. Estimate Time and Space Complexity
 
 ## Complexity Analysis
 
@@ -92,12 +87,10 @@ Explanation: 25 + 10 + 1 = 36 (3 coins)
 
 **Why O(amount × coins)?** For each amount from 1 to target, we try every coin — two nested loops.
 
-</details>
 
 ---
 
-<details>
-<summary><strong>4. Which Algorithm and Why?</strong></summary>
+4. Which Algorithm and Why?
 
 ## Algorithm: Bottom-Up Dynamic Programming
 
@@ -122,12 +115,10 @@ Build a table `dp[0..amount]` where `dp[i]` = minimum coins to make amount `i`.
 
 This is an **unbounded knapsack** variant — coins can be reused, so we loop over all amounts and try all coins at each step.
 
-</details>
 
 ---
 
-<details>
-<summary><strong>5. High-Level Design — Components and Data Flow</strong></summary>
+5. High-Level Design — Components and Data Flow
 
 ## High-Level Design
 
@@ -157,12 +148,10 @@ Final dp = [0,1,2,3,4,1,2,3,4,5,1,2]
 Output: dp[11] = 2  (coins: 10 + 1)
 ```
 
-</details>
 
 ---
 
-<details>
-<summary><strong>6. Java Solution with Comments and Examples</strong></summary>
+6. Java Solution with Comments and Examples
 
 ## Java Implementation
 
@@ -240,12 +229,10 @@ Input: coins=[1,2,5], amount=0
 Output: 0
 ```
 
-</details>
 
 ---
 
-<details>
-<summary><strong>7. Python Solution with Comments and Examples</strong></summary>
+7. Python Solution with Comments and Examples
 
 ## Python Implementation
 
@@ -306,12 +293,10 @@ coins=[1,2,5], amount=0 → 0
 coins=[5], amount=10 → 2
 ```
 
-</details>
 
 ---
 
-<details>
-<summary><strong>8. Interview Questions and Answers</strong></summary>
+8. Interview Questions and Answers
 
 ## Q&A
 
@@ -333,12 +318,10 @@ A: Change the inner loop direction — iterate amounts from right to left to pre
 **Q: How does this relate to the knapsack problem?**
 A: This is the **unbounded knapsack** problem — items (coins) have unlimited supply, and we minimize count (instead of maximizing value).
 
-</details>
 
 ---
 
-<details>
-<summary><strong>9. Summary</strong></summary>
+9. Summary
 
 ## Summary
 
@@ -360,4 +343,3 @@ A: This is the **unbounded knapsack** problem — items (coins) have unlimited s
 - Related: Word Break, Combination Sum, Unbounded Knapsack.
 - Any "minimum steps/operations to reach a goal" formulation.
 
-</details>

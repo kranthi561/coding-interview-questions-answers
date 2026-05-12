@@ -2,8 +2,7 @@
 
 ---
 
-<details>
-<summary><strong>1. What is meant by Sum of Two Integers?</strong></summary>
+1. What is meant by Sum of Two Integers?
 
 ## What is Sum of Two Integers?
 
@@ -26,12 +25,10 @@ Output: 0
 **Why is this interesting?**
 At the hardware level, addition is implemented with logic gates using XOR and AND operations. This problem asks you to simulate that directly.
 
-</details>
 
 ---
 
-<details>
-<summary><strong>2. Clarify Requirements</strong></summary>
+2. Clarify Requirements
 
 ## Requirements
 
@@ -52,12 +49,10 @@ At the hardware level, addition is implemented with logic gates using XOR and AN
 - Can either input be negative? → Yes
 - Can we use multiplication or division? → No, only bitwise operations
 
-</details>
 
 ---
 
-<details>
-<summary><strong>3. Time and Space Complexity</strong></summary>
+3. Time and Space Complexity
 
 ## Complexity Analysis
 
@@ -71,12 +66,10 @@ For 32-bit integers, the carry propagation loop runs at most 32 iterations — a
 
 **Space:** Only two variables (`sum`, `carry`) are needed.
 
-</details>
 
 ---
 
-<details>
-<summary><strong>4. Algorithm Choice and Why</strong></summary>
+4. Algorithm Choice and Why
 
 ## Algorithm: Bitwise XOR and AND
 
@@ -132,12 +125,10 @@ Result: a = 1000 = 8 ✓
 - String conversion doesn't meet the bitwise requirement.
 - This XOR/AND loop is the exact logic used inside CPUs for addition.
 
-</details>
 
 ---
 
-<details>
-<summary><strong>5. High-Level Design</strong></summary>
+5. High-Level Design
 
 ## High-Level Design
 
@@ -173,12 +164,10 @@ a bit | b bit | XOR (sum) | AND (carry-out)
   1   |   1   |     0     |       1  ← carry into next bit
 ```
 
-</details>
 
 ---
 
-<details>
-<summary><strong>6. Java Solution with Explanation</strong></summary>
+6. Java Solution with Explanation
 
 ## Java Implementation
 
@@ -237,12 +226,10 @@ public class SumOfTwoIntegers {
 ### Why Java Handles Negatives Correctly
 Java `int` uses **two's complement** representation. The XOR/AND bit operations work identically for negative numbers — the sign bit is just another bit in the computation.
 
-</details>
 
 ---
 
-<details>
-<summary><strong>7. Python Solution with Explanation</strong></summary>
+7. Python Solution with Explanation
 
 ## Python Implementation
 
@@ -291,12 +278,10 @@ if __name__ == "__main__":
 ### Why Python Needs a Mask
 Python integers have **arbitrary precision** — they don't overflow at 32 bits. Without masking, left shifts on negative numbers grow infinitely. The `MASK = 0xFFFFFFFF` keeps values within 32 bits. After the loop, `~(a ^ MASK)` converts an unsigned 32-bit value back to a Python signed negative integer.
 
-</details>
 
 ---
 
-<details>
-<summary><strong>8. Interview Q&A</strong></summary>
+8. Interview Q&A
 
 ## Q&A
 
@@ -318,12 +303,10 @@ A: Python integers are arbitrary precision. Without masking, the left shift in `
 **Q: Can you implement subtraction similarly?**
 A: Yes. `a - b` = `a + (-b)` = `a + (~b + 1)`. You negate `b` using bitwise NOT plus 1 (two's complement negation), then add.
 
-</details>
 
 ---
 
-<details>
-<summary><strong>9. Summary</strong></summary>
+9. Summary
 
 ## Summary
 
@@ -343,4 +326,3 @@ A: Yes. `a - b` = `a + (-b)` = `a + (~b + 1)`. You negate `b` using bitwise NOT 
 - Understanding low-level CPU addition
 - Implementing addition in restricted environments (embedded, HDL logic)
 
-</details>

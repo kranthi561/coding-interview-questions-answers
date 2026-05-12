@@ -2,8 +2,7 @@
 
 ---
 
-<details>
-<summary><strong>1. What is meant by Jump Game?</strong></summary>
+1. What is meant by Jump Game?
 
 ## What is Jump Game?
 
@@ -31,12 +30,10 @@ Output: false
 Explanation: Always stuck at index 3 — no way to reach index 4.
 ```
 
-</details>
 
 ---
 
-<details>
-<summary><strong>2. Clarify Requirements — Functional and Non-Functional</strong></summary>
+2. Clarify Requirements — Functional and Non-Functional
 
 ## Requirements
 
@@ -62,12 +59,10 @@ Explanation: Always stuck at index 3 — no way to reach index 4.
 - What if n=1? → Already at last index, return true.
 - Can values be 0? → Yes, zeros block forward progress from that position.
 
-</details>
 
 ---
 
-<details>
-<summary><strong>3. Estimate Time and Space Complexity</strong></summary>
+3. Estimate Time and Space Complexity
 
 ## Complexity Analysis
 
@@ -94,12 +89,10 @@ Explanation: Always stuck at index 3 — no way to reach index 4.
 
 **Why O(n)?** We scan once from left to right, updating the farthest reachable index at each step.
 
-</details>
 
 ---
 
-<details>
-<summary><strong>4. Which Algorithm and Why?</strong></summary>
+4. Which Algorithm and Why?
 
 ## Algorithm: Greedy (Farthest Reach)
 
@@ -127,12 +120,10 @@ return true
 
 **Why it works:** At each index `i`, the farthest we can reach from there is `i + nums[i]`. If `maxReach >= n-1` at any point, we can reach the end. If we encounter an index `i > maxReach`, we're stranded.
 
-</details>
 
 ---
 
-<details>
-<summary><strong>5. High-Level Design — Components and Data Flow</strong></summary>
+5. High-Level Design — Components and Data Flow
 
 ## High-Level Design
 
@@ -166,12 +157,10 @@ i=3: maxReach = max(3, 3+0) = 3
 i=4: 4 > 3 → STRANDED  → return false ✗
 ```
 
-</details>
 
 ---
 
-<details>
-<summary><strong>6. Java Solution with Comments and Examples</strong></summary>
+6. Java Solution with Comments and Examples
 
 ## Java Implementation
 
@@ -265,12 +254,10 @@ Input: [5, 0, 0, 0, 0]
 Output: true
 ```
 
-</details>
 
 ---
 
-<details>
-<summary><strong>7. Python Solution with Comments and Examples</strong></summary>
+7. Python Solution with Comments and Examples
 
 ## Python Implementation
 
@@ -329,12 +316,10 @@ if __name__ == "__main__":
 [PASS] nums=[1, 0, 1, 0] → Output: False, Expected: False
 ```
 
-</details>
 
 ---
 
-<details>
-<summary><strong>8. Interview Questions and Answers</strong></summary>
+8. Interview Questions and Answers
 
 ## Q&A
 
@@ -356,12 +341,10 @@ A: Yes, but they don't affect correctness — `maxReach = i + nums[i]` may excee
 **Q: What is the DP recurrence for this problem?**
 A: `dp[i] = true` if any `j < i` has `dp[j] = true` and `j + nums[j] >= i`. This is O(n²) and less efficient than greedy, but follows the same logic.
 
-</details>
 
 ---
 
-<details>
-<summary><strong>9. Summary</strong></summary>
+9. Summary
 
 ## Summary
 
@@ -382,4 +365,3 @@ A: `dp[i] = true` if any `j < i` has `dp[j] = true` and `j + nums[j] >= i`. This
 - Reachability / coverage problems on a linear array.
 - Related: Jump Game II (min jumps), Video Stitching, Interval Coverage, Boat Passengers.
 
-</details>

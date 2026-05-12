@@ -2,8 +2,7 @@
 
 ---
 
-<details>
-<summary><strong>1. What is meant by Product of Array Except Self?</strong></summary>
+1. What is meant by Product of Array Except Self?
 
 ## What is Product of Array Except Self?
 
@@ -24,12 +23,10 @@ Explanation:
   answer[3] = 1 * 2 * 3 = 6
 ```
 
-</details>
 
 ---
 
-<details>
-<summary><strong>2. Clarify Requirements</strong></summary>
+2. Clarify Requirements
 
 ## Requirements
 
@@ -50,12 +47,10 @@ Explanation:
 - Can it contain negative numbers? → Yes
 - Minimum length? → At least 2 elements
 
-</details>
 
 ---
 
-<details>
-<summary><strong>3. Time and Space Complexity</strong></summary>
+3. Time and Space Complexity
 
 ## Complexity Analysis
 
@@ -66,12 +61,10 @@ Explanation:
 | **Prefix + Suffix Products** | **O(n)** | **O(n)** |
 | Optimized (single output array) | O(n) | O(1) extra |
 
-</details>
 
 ---
 
-<details>
-<summary><strong>4. Algorithm Choice and Why</strong></summary>
+4. Algorithm Choice and Why
 
 ## Algorithm: Prefix and Suffix Products
 
@@ -93,12 +86,10 @@ suffix   = [24, 12, 4,  1]   (product of everything right of index i)
 answer   = [24, 12, 8,  6]   (prefix[i] * suffix[i])
 ```
 
-</details>
 
 ---
 
-<details>
-<summary><strong>5. High-Level Design</strong></summary>
+5. High-Level Design
 
 ## High-Level Design
 
@@ -124,12 +115,10 @@ Pass 2 (right → left, suffix):
 Final: [24, 12, 8, 6]
 ```
 
-</details>
 
 ---
 
-<details>
-<summary><strong>6. Java Solution with Explanation</strong></summary>
+6. Java Solution with Explanation
 
 ## Java Implementation
 
@@ -190,12 +179,10 @@ Input: [1,2,3,4] → Output: 24 12 8 6
 Input: [-1,1,0,-3,3] → Output: 0 0 9 0 0
 ```
 
-</details>
 
 ---
 
-<details>
-<summary><strong>7. Python Solution with Explanation</strong></summary>
+7. Python Solution with Explanation
 
 ## Python Implementation
 
@@ -240,12 +227,10 @@ if __name__ == "__main__":
 [0, 0, 9, 0, 0]
 ```
 
-</details>
 
 ---
 
-<details>
-<summary><strong>8. Interview Q&A</strong></summary>
+8. Interview Q&A
 
 ## Q&A
 
@@ -261,12 +246,10 @@ A: By convention, the output array doesn't count toward extra space. The only ad
 **Q: What if two zeros exist?**  
 A: All products become 0, since every product includes at least one zero.
 
-</details>
 
 ---
 
-<details>
-<summary><strong>9. Summary</strong></summary>
+9. Summary
 
 ## Summary
 
@@ -278,4 +261,3 @@ A: All products become 0, since every product includes at least one zero.
 | **Space Complexity** | O(1) extra |
 | **Key Insight** | `answer[i] = left_product[i] × right_product[i]` |
 
-</details>

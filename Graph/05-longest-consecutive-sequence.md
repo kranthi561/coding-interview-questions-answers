@@ -2,8 +2,7 @@
 
 ---
 
-<details>
-<summary><strong>1. What is meant by Longest Consecutive Sequence?</strong></summary>
+1. What is meant by Longest Consecutive Sequence?
 
 ## What is Longest Consecutive Sequence?
 
@@ -29,12 +28,10 @@ Output: 9
 Explanation: [0, 1, 2, 3, 4, 5, 6, 7, 8]
 ```
 
-</details>
 
 ---
 
-<details>
-<summary><strong>2. Clarify Requirements — Functional and Non-Functional</strong></summary>
+2. Clarify Requirements — Functional and Non-Functional
 
 ## Requirements
 
@@ -60,12 +57,10 @@ Explanation: [0, 1, 2, 3, 4, 5, 6, 7, 8]
 - Return length or the sequence itself? → Length only.
 - Can values be negative? → Yes.
 
-</details>
 
 ---
 
-<details>
-<summary><strong>3. Estimate Time and Space Complexity</strong></summary>
+3. Estimate Time and Space Complexity
 
 ## Complexity Analysis
 
@@ -85,12 +80,10 @@ Explanation: [0, 1, 2, 3, 4, 5, 6, 7, 8]
 
 **Why O(n)?** Each element is the starting point of a sequence at most once (only when `n-1` is not in the set). The inner while-loop across all starting points runs at most `n` times total — amortized O(1) per element.
 
-</details>
 
 ---
 
-<details>
-<summary><strong>4. Which Algorithm and Why?</strong></summary>
+4. Which Algorithm and Why?
 
 ## Algorithm: HashSet with Sequence Start Detection
 
@@ -119,12 +112,10 @@ For n=2:   1 in set → skip
 Max = 4
 ```
 
-</details>
 
 ---
 
-<details>
-<summary><strong>5. High-Level Design — Components and Data Flow</strong></summary>
+5. High-Level Design — Components and Data Flow
 
 ## High-Level Design
 
@@ -153,12 +144,10 @@ Iteration:
 Output: 4
 ```
 
-</details>
 
 ---
 
-<details>
-<summary><strong>6. Java Solution with Comments and Examples</strong></summary>
+6. Java Solution with Comments and Examples
 
 ## Java Implementation
 
@@ -250,12 +239,10 @@ Input: [-3,-2,-1,0,1]
 Output: 5
 ```
 
-</details>
 
 ---
 
-<details>
-<summary><strong>7. Python Solution with Comments and Examples</strong></summary>
+7. Python Solution with Comments and Examples
 
 ## Python Implementation
 
@@ -322,12 +309,10 @@ if __name__ == "__main__":
 [PASS] nums=[1] → Output: 1, Expected: 1
 ```
 
-</details>
 
 ---
 
-<details>
-<summary><strong>8. Interview Questions and Answers</strong></summary>
+8. Interview Questions and Answers
 
 ## Q&A
 
@@ -349,12 +334,10 @@ A: Store the start of the longest sequence and its length. Then iterate from `st
 **Q: Why is this classified under Graph?**
 A: Conceptually, consecutive integer relationships form an implicit graph (edges between n and n±1). The problem is essentially finding the longest connected path in this implicit integer graph.
 
-</details>
 
 ---
 
-<details>
-<summary><strong>9. Summary</strong></summary>
+9. Summary
 
 ## Summary
 
@@ -375,4 +358,3 @@ A: Conceptually, consecutive integer relationships form an implicit graph (edges
 - Finding contiguous ranges in an unordered set of values.
 - Related: Missing Ranges, Find All Numbers Disappeared in an Array, Union-Find-based range merging.
 
-</details>

@@ -2,8 +2,7 @@
 
 ---
 
-<details>
-<summary><strong>1. What is meant by Maximum Product Subarray?</strong></summary>
+1. What is meant by Maximum Product Subarray?
 
 ## What is Maximum Product Subarray?
 
@@ -25,12 +24,10 @@ Explanation: The result cannot be 2, because [-2,-1] is not contiguous.
 **Why is this harder than Maximum Subarray (sum)?**  
 Negative × negative = positive. A very negative number can become the maximum if another negative appears later.
 
-</details>
 
 ---
 
-<details>
-<summary><strong>2. Clarify Requirements</strong></summary>
+2. Clarify Requirements
 
 ## Requirements
 
@@ -51,12 +48,10 @@ Negative × negative = positive. A very negative number can become the maximum i
 - Can all values be negative? → Yes; must handle even count of negatives.
 - Return value or indices? → Just the product value.
 
-</details>
 
 ---
 
-<details>
-<summary><strong>3. Time and Space Complexity</strong></summary>
+3. Time and Space Complexity
 
 ## Complexity Analysis
 
@@ -68,12 +63,10 @@ Negative × negative = positive. A very negative number can become the maximum i
 **Why track both max and min?**  
 A large negative (current min) multiplied by the next negative number can become the new maximum.
 
-</details>
 
 ---
 
-<details>
-<summary><strong>4. Algorithm Choice and Why</strong></summary>
+4. Algorithm Choice and Why
 
 ## Algorithm: Track Current Max and Min
 
@@ -87,12 +80,10 @@ Unlike sum, negative values flip the sign of the product. So we must track **bot
 ### Zero Handling
 When `num = 0`, both max and min reset to 0. Starting fresh at `num` handles this since `max(0, 0, 0) = 0` and a fresh subarray from next element begins.
 
-</details>
 
 ---
 
-<details>
-<summary><strong>5. High-Level Design</strong></summary>
+5. High-Level Design
 
 ## High-Level Design
 
@@ -117,12 +108,10 @@ i=2: num=-4  → maxP=24, minP=-12, result=24
               (minP*num = (-6)*(-4) = 24 → new max!)
 ```
 
-</details>
 
 ---
 
-<details>
-<summary><strong>6. Java Solution with Explanation</strong></summary>
+6. Java Solution with Explanation
 
 ## Java Implementation
 
@@ -177,12 +166,10 @@ public class MaximumProductSubarray {
 -2
 ```
 
-</details>
 
 ---
 
-<details>
-<summary><strong>7. Python Solution with Explanation</strong></summary>
+7. Python Solution with Explanation
 
 ## Python Implementation
 
@@ -224,12 +211,10 @@ if __name__ == "__main__":
 -2
 ```
 
-</details>
 
 ---
 
-<details>
-<summary><strong>8. Interview Q&A</strong></summary>
+8. Interview Q&A
 
 ## Q&A
 
@@ -245,12 +230,10 @@ A: Sum is monotone — adding a negative always decreases. Product is not monoto
 **Q: What if all elements are negative?**  
 A: The answer is the product of all negatives if count is even, or drop the first or last negative if count is odd.
 
-</details>
 
 ---
 
-<details>
-<summary><strong>9. Summary</strong></summary>
+9. Summary
 
 ## Summary
 
@@ -262,4 +245,3 @@ A: The answer is the product of all negatives if count is even, or drop the firs
 | **Space Complexity** | O(1) |
 | **Key Insight** | Negatives flip max↔min — track both to handle sign changes |
 
-</details>

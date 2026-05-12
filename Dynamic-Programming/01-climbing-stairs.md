@@ -2,8 +2,7 @@
 
 ---
 
-<details>
-<summary><strong>1. What is meant by Climbing Stairs?</strong></summary>
+1. What is meant by Climbing Stairs?
 
 ## What is Climbing Stairs?
 
@@ -29,12 +28,10 @@ Explanation:
   2 steps + 1 step
 ```
 
-</details>
 
 ---
 
-<details>
-<summary><strong>2. Clarify Requirements — Functional and Non-Functional</strong></summary>
+2. Clarify Requirements — Functional and Non-Functional
 
 ## Requirements
 
@@ -59,12 +56,10 @@ Explanation:
 - Are steps ordered or unordered? → Ordered (different order = different way).
 - Can steps larger than 2 be used? → No, only 1 or 2.
 
-</details>
 
 ---
 
-<details>
-<summary><strong>3. Estimate Time and Space Complexity</strong></summary>
+3. Estimate Time and Space Complexity
 
 ## Complexity Analysis
 
@@ -96,12 +91,10 @@ Explanation:
 | **Time** | O(n) — single loop |
 | **Space** | O(1) — only two variables |
 
-</details>
 
 ---
 
-<details>
-<summary><strong>4. Which Algorithm and Why?</strong></summary>
+4. Which Algorithm and Why?
 
 ## Algorithm: Space-Optimized Fibonacci DP
 
@@ -125,12 +118,10 @@ Because at step `n`, you arrived from step `n-1` (took 1 step) or step `n-2` (to
 
 You only ever need the last two values, so two variables replace the full DP array.
 
-</details>
 
 ---
 
-<details>
-<summary><strong>5. High-Level Design — Components and Data Flow</strong></summary>
+5. High-Level Design — Components and Data Flow
 
 ## High-Level Design
 
@@ -170,12 +161,10 @@ Output: 8
 Without memoization, f(2) is computed twice — DP avoids this.
 ```
 
-</details>
 
 ---
 
-<details>
-<summary><strong>6. Java Solution with Comments and Examples</strong></summary>
+6. Java Solution with Comments and Examples
 
 ## Java Implementation
 
@@ -247,12 +236,10 @@ Input: n=10
 Output: 89
 ```
 
-</details>
 
 ---
 
-<details>
-<summary><strong>7. Python Solution with Comments and Examples</strong></summary>
+7. Python Solution with Comments and Examples
 
 ## Python Implementation
 
@@ -303,12 +290,10 @@ Input: n=10  →  Output: 89
 Input: n=45  →  Output: 1836311903
 ```
 
-</details>
 
 ---
 
-<details>
-<summary><strong>8. Interview Questions and Answers</strong></summary>
+8. Interview Questions and Answers
 
 ## Q&A
 
@@ -330,12 +315,10 @@ A: `1,836,311,903` — fits in a 32-bit int (Java `int` or Python `int`).
 **Q: How does this relate to the Fibonacci sequence exactly?**
 A: `climbStairs(n) = Fibonacci(n+1)`, where `Fibonacci(1)=1, Fibonacci(2)=1, Fibonacci(3)=2, ...`.
 
-</details>
 
 ---
 
-<details>
-<summary><strong>9. Summary</strong></summary>
+9. Summary
 
 ## Summary
 
@@ -357,4 +340,3 @@ A: `climbStairs(n) = Fibonacci(n+1)`, where `Fibonacci(1)=1, Fibonacci(2)=1, Fib
 - Any DP recurrence that only looks back a constant number of steps.
 - Related: House Robber, Decode Ways, Unique Paths.
 
-</details>

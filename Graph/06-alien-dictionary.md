@@ -2,8 +2,7 @@
 
 ---
 
-<details>
-<summary><strong>1. What is meant by Alien Dictionary?</strong></summary>
+1. What is meant by Alien Dictionary?
 
 ## What is Alien Dictionary?
 
@@ -32,12 +31,10 @@ Explanation:
   Topological order: w, e, r, t, f → "wertf"
 ```
 
-</details>
 
 ---
 
-<details>
-<summary><strong>2. Clarify Requirements — Functional and Non-Functional</strong></summary>
+2. Clarify Requirements — Functional and Non-Functional
 
 ## Requirements
 
@@ -64,12 +61,10 @@ Explanation:
 - Can a word be its own prefix in the list? (e.g., ["abc","ab"]) → Invalid → return `""`.
 - Are all 26 letters guaranteed to appear? → No, only return letters that appear.
 
-</details>
 
 ---
 
-<details>
-<summary><strong>3. Estimate Time and Space Complexity</strong></summary>
+3. Estimate Time and Space Complexity
 
 ## Complexity Analysis
 
@@ -91,12 +86,10 @@ Let `C` = total number of characters across all words, `U` = number of unique ch
 
 Both approaches are effectively **O(C)** since C ≥ U always.
 
-</details>
 
 ---
 
-<details>
-<summary><strong>4. Which Algorithm and Why?</strong></summary>
+4. Which Algorithm and Why?
 
 ## Algorithm: Kahn's BFS Topological Sort
 
@@ -121,12 +114,10 @@ Both approaches are effectively **O(C)** since C ≥ U always.
 6. Return result string.
 ```
 
-</details>
 
 ---
 
-<details>
-<summary><strong>5. High-Level Design — Components and Data Flow</strong></summary>
+5. High-Level Design — Components and Data Flow
 
 ## High-Level Design
 
@@ -169,12 +160,10 @@ Step 3 — BFS:
 Result: "w e r t f" → "wertf"
 ```
 
-</details>
 
 ---
 
-<details>
-<summary><strong>6. Java Solution with Comments and Examples</strong></summary>
+6. Java Solution with Comments and Examples
 
 ## Java Implementation
 
@@ -289,12 +278,10 @@ words=[abc,ab]
 Output: ''
 ```
 
-</details>
 
 ---
 
-<details>
-<summary><strong>7. Python Solution with Comments and Examples</strong></summary>
+7. Python Solution with Comments and Examples
 
 ## Python Implementation
 
@@ -377,12 +364,10 @@ if __name__ == "__main__":
 [PASS] words=['z', 'x'] → Output: 'zx'
 ```
 
-</details>
 
 ---
 
-<details>
-<summary><strong>8. Interview Questions and Answers</strong></summary>
+8. Interview Questions and Answers
 
 ## Q&A
 
@@ -404,12 +389,10 @@ A: Alien Dictionary first extracts the graph from raw data (word comparisons), t
 **Q: What if all words are the same?**
 A: No edges are extracted. All characters have in-degree 0. Any permutation of the characters is a valid answer.
 
-</details>
 
 ---
 
-<details>
-<summary><strong>9. Summary</strong></summary>
+9. Summary
 
 ## Summary
 
@@ -430,4 +413,3 @@ A: No edges are extracted. All characters have in-degree 0. Any permutation of t
 - Deriving an ordering from pairwise comparison data.
 - Related: Course Schedule II, Task Scheduler, Sequence Reconstruction.
 
-</details>

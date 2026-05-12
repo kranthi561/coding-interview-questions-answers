@@ -97,28 +97,28 @@
 
 ## 4. [Graph (8)](https://github.com/kranthi561/coding-interview-questions-answers/tree/main/Graph)
 
-1. [Clone Graph](Graph/01-clone-graph.md)
+1. [Clone Graph](https://github.com/kranthi561/coding-interview-questions-answers/tree/main/Graph/01-clone-graph.md)
   Deep copy a connected undirected graph where each node has a value and a list of neighbors.
    BFS/DFS with a hash map records original → clone mappings and connects cloned neighbors as it traverses.
-2. [Course Schedule](Graph/02-course-schedule.md)
+2. [Course Schedule](https://github.com/kranthi561/coding-interview-questions-answers/tree/main/Graph/02-course-schedule.md)
   Given course prerequisites, determine if it is possible to finish all courses (detect a directed cycle).
    Topological sort via DFS with three states (unvisited, visiting, visited) detects back edges that form cycles.
-3. [Pacific Atlantic Water Flow](Graph/03-pacific-atlantic-water-flow.md)
+3. [Pacific Atlantic Water Flow](https://github.com/kranthi561/coding-interview-questions-answers/tree/main/Graph/03-pacific-atlantic-water-flow.md)
   Find all grid cells from which water can flow to both the Pacific (top/left) and Atlantic (bottom/right) oceans.
    BFS/DFS inward from each ocean's border marks reachable cells; the answer is the intersection of both sets.
-4. [Number of Islands](Graph/04-number-of-islands.md)
+4. [Number of Islands](https://github.com/kranthi561/coding-interview-questions-answers/tree/main/Graph/04-number-of-islands.md)
   Count the number of islands (connected groups of '1's) in a 2D binary grid.
    DFS/BFS from each unvisited '1' floods the entire island by marking cells as visited, incrementing the count per flood.
-5. [Longest Consecutive Sequence](Graph/05-longest-consecutive-sequence.md)
+5. [Longest Consecutive Sequence](https://github.com/kranthi561/coding-interview-questions-answers/tree/main/Graph/05-longest-consecutive-sequence.md)
   Find the length of the longest consecutive integer sequence in an unsorted array, in O(n) time.
    Insert all values into a hash set; only start counting sequences from elements with no left neighbor (`n-1` not in set).
-6. [Alien Dictionary](Graph/06-alien-dictionary.md)
+6. [Alien Dictionary](https://github.com/kranthi561/coding-interview-questions-answers/tree/main/Graph/06-alien-dictionary.md)
   Derive the character ordering of an alien language from a list of words sorted in that language's order.
    Compare adjacent words to extract ordering edges, build a directed graph, then topologically sort to get the character order.
-7. [Graph Valid Tree](Graph/07-graph-valid-tree.md)
+7. [Graph Valid Tree](https://github.com/kranthi561/coding-interview-questions-answers/tree/main/Graph/07-graph-valid-tree.md)
   Determine whether n nodes and a list of edges form a valid tree (connected and acyclic).
    A valid tree has exactly n-1 edges; Union-Find or DFS verifies no cycle exists and all nodes are reachable.
-8. [Number of Connected Components in an Undirected Graph](Graph/08-number-of-connected-components.md)
+8. [Number of Connected Components in an Undirected Graph](https://github.com/kranthi561/coding-interview-questions-answers/tree/main/Graph/08-number-of-connected-components.md)
   Count the number of distinct connected components in an undirected graph with n nodes.
    Union-Find merges nodes sharing an edge; the number of remaining distinct roots equals the component count.
 
@@ -144,133 +144,133 @@
 
 ---
 
-## 6. Linked List (6)
+## 6. [Linked List (6)](https://github.com/kranthi561/coding-interview-questions-answers/tree/main/Linked-List)
 
-1. **Reverse Linked List**
+1. **[Reverse Linked List](https://github.com/kranthi561/coding-interview-questions-answers/tree/main/Linked-List/01-reverse-linked-list.md)**
   Reverse a singly linked list in place and return the new head.
    Iterative: use three pointers (prev, current, next) to redirect each node's next pointer backward as you traverse.
-2. **Linked List Cycle**
+2. **[Linked List Cycle](https://github.com/kranthi561/coding-interview-questions-answers/tree/main/Linked-List/02-linked-list-cycle.md)**
   Detect whether a linked list contains a cycle.
    Floyd's cycle detection: a slow pointer (1 step) and fast pointer (2 steps) will eventually meet if and only if a cycle exists.
-3. **Merge Two Sorted Lists**
+3. **[Merge Two Sorted Lists](https://github.com/kranthi561/coding-interview-questions-answers/tree/main/Linked-List/03-merge-two-sorted-lists.md)**
   Merge two sorted linked lists into a single sorted linked list.
    Compare current heads, attach the smaller node to the result, and advance that pointer — repeat until one list is exhausted.
-4. **Merge k Sorted Lists**
+4. **[Merge k Sorted Lists](https://github.com/kranthi561/coding-interview-questions-answers/tree/main/Linked-List/04-merge-k-sorted-lists.md)**
   Merge k sorted linked lists into one sorted linked list.
    Min-heap (priority queue) holds the current head of each list; repeatedly extract the minimum and enqueue the next node from that list.
-5. **Remove Nth Node From End**
+5. **[Remove Nth Node From End](https://github.com/kranthi561/coding-interview-questions-answers/tree/main/Linked-List/05-remove-nth-node-from-end.md)**
   Remove the nth node from the end of a linked list in a single pass.
    Two-pointer trick: advance the first pointer n steps ahead, then move both together until the first reaches the end.
-6. **Reorder List**
+6. **[Reorder List](https://github.com/kranthi561/coding-interview-questions-answers/tree/main/Linked-List/06-reorder-list.md)**
   Reorder a linked list as L0 → Ln → L1 → Ln-1 → L2 → Ln-2 → ...
    Split the list at the midpoint, reverse the second half, then interleave nodes from both halves alternately.
 
 ---
 
-## 7. Matrix (4)
+## 7. [Matrix (4)](https://github.com/kranthi561/coding-interview-questions-answers/tree/main/Matrix)
 
-1. **Set Matrix Zeroes**
+1. **[Set Matrix Zeroes](https://github.com/kranthi561/coding-interview-questions-answers/blob/main/Matrix/01-set-matrix-zeroes.md)**
   Given a matrix, set an entire row and column to zero if any element in that row or column is zero, in place.
    Use the first row and first column as zero-markers to record which rows/columns need zeroing, avoiding O(mn) extra space.
-2. **Spiral Matrix**
+2. **[Spiral Matrix](https://github.com/kranthi561/coding-interview-questions-answers/blob/main/Matrix/02-spiral-matrix.md)**
   Return all elements of an m×n matrix traversed in spiral (clockwise) order.
    Maintain four boundaries (top, bottom, left, right) and shrink them inward after traversing each side.
-3. **Rotate Image**
+3. **[Rotate Image](https://github.com/kranthi561/coding-interview-questions-answers/blob/main/Matrix/03-rotate-image.md)**
   Rotate an n×n matrix 90 degrees clockwise in place.
    Transpose the matrix by swapping `matrix[i][j]` with `matrix[j][i]`, then reverse each row.
-4. **Word Search**
+4. **[Word Search](https://github.com/kranthi561/coding-interview-questions-answers/blob/main/Matrix/04-word-search.md)**
   Check if a given word exists in a 2D character grid using adjacent (up/down/left/right) cells.
    DFS with backtracking starts from each matching cell and explores all paths, marking cells visited and restoring them on backtrack.
 
 ---
 
-## 8. String (10)
+## 8. [String (10)](https://github.com/kranthi561/coding-interview-questions-answers/tree/main/String)
 
-1. **Longest Substring Without Repeating Characters**
+1. **[Longest Substring Without Repeating Characters](https://github.com/kranthi561/coding-interview-questions-answers/blob/main/String/01-longest-substring-without-repeating-characters.md)**
   Find the length of the longest substring that contains no duplicate characters.
    Sliding window with a hash set: expand right pointer freely, shrink left pointer when a duplicate is detected.
-2. **Longest Repeating Character Replacement**
+2. [**Longest Repeating Character Replacement**](https://github.com/kranthi561/coding-interview-questions-answers/blob/main/String/02-longest-repeating-character-replacement.md)
   Find the longest substring achievable by replacing at most k characters to make all characters the same.
    Sliding window: a window is valid when `(window length − max character frequency) ≤ k`; expand right and shrink left as needed.
-3. **Minimum Window Substring**
+3. [**Minimum Window Substring**](https://github.com/kranthi561/coding-interview-questions-answers/blob/main/String/03-minimum-window-substring.md)
   Find the smallest substring of s that contains every character of t.
    Sliding window expands to cover all required characters, then contracts from the left to find the minimum valid window.
-4. **Valid Anagram**
+4. [**Valid Anagram**](https://github.com/kranthi561/coding-interview-questions-answers/blob/main/String/04-valid-anagram.md)
   Determine whether two strings are anagrams of each other (same characters, same counts).
    Count character frequencies of both strings with a hash map (or frequency array); they must be identical.
-5. **Group Anagrams**
+5. [**Group Anagrams**](https://github.com/kranthi561/coding-interview-questions-answers/blob/main/String/05-group-anagrams.md)
   Group an array of strings by their anagram equivalence class.
    Use the sorted version of each string (or a frequency tuple) as a hash map key; strings sharing the same key are anagrams.
-6. **Valid Parentheses**
+6. [**Valid Parentheses**](https://github.com/kranthi561/coding-interview-questions-answers/blob/main/String/06-valid-parentheses.md)
   Check whether a string of brackets is validly opened and closed in correct order.
    Stack-based: push every open bracket; on a close bracket verify it matches the top of the stack and pop it.
-7. **Valid Palindrome**
+7. [**Valid Palindrome**](https://github.com/kranthi561/coding-interview-questions-answers/blob/main/String/07-valid-palindrome.md)
   Determine if a string is a palindrome ignoring non-alphanumeric characters and case.
    Two-pointer approach from both ends, skipping non-alphanumeric characters, comparing characters case-insensitively.
-8. **Longest Palindromic Substring**
+8. [**Longest Palindromic Substring**](https://github.com/kranthi561/coding-interview-questions-answers/blob/main/String/08-longest-palindromic-substring.md)
   Find the longest palindromic substring within a given string.
    Expand around each of the 2n-1 possible centers (each character and each gap) tracking the widest palindrome found.
-9. **Palindromic Substrings**
+9. [**Palindromic Substrings**](https://github.com/kranthi561/coding-interview-questions-answers/blob/main/String/09-palindromic-substrings.md)
   Count the total number of palindromic substrings in a string.
    Expand around each center (2n-1 centers) and count every valid palindrome found, including single characters.
-10. **Encode and Decode Strings**
+10. [**Encode and Decode Strings**](https://github.com/kranthi561/coding-interview-questions-answers/blob/main/String/10-encode-and-decode-strings.md)
   Design functions to encode a list of strings into a single string and decode it back losslessly.
     Prefix each string with its character length and a separator (e.g., `"4#word"`); decoding reads the prefix to extract each string exactly.
 
 ---
 
-## 9. Tree (14)
+## 9. [Tree (14)](https://github.com/kranthi561/coding-interview-questions-answers/tree/main/Tree)
 
-1. **Maximum Depth of Binary Tree**
+1. [**Maximum Depth of Binary Tree**](https://github.com/kranthi561/coding-interview-questions-answers/tree/main/Tree/01-maximum-depth-of-binary-tree.md)
   Find the maximum depth (number of nodes along the longest root-to-leaf path) of a binary tree.
    Recursive DFS: `depth = 1 + max(depth(left), depth(right))`; base case returns 0 for null nodes.
-2. **Same Tree**
+2. [**Same Tree**](https://github.com/kranthi561/coding-interview-questions-answers/tree/main/Tree/02-same-tree.md)
   Determine if two binary trees are structurally identical with the same node values at every position.
    Recursive comparison: both null → true; one null → false; values differ → false; recurse on both children.
-3. **Invert Binary Tree**
+3. [**Invert Binary Tree**](https://github.com/kranthi561/coding-interview-questions-answers/tree/main/Tree/03-invert-binary-tree.md)
   Produce the mirror image of a binary tree by swapping left and right children at every node.
    Recursive: swap left and right children at the current node, then recursively invert both subtrees.
-4. **Binary Tree Maximum Path Sum**
+4. [**Binary Tree Maximum Path Sum**](https://github.com/kranthi561/coding-interview-questions-answers/tree/main/Tree/04-binary-tree-maximum-path-sum.md)
   Find the maximum sum of any path between any two nodes in a binary tree (path need not pass through root).
    DFS computes the best single-arm gain from each node; at each step update a global max that includes both arms crossing the node.
-5. **Binary Tree Level Order Traversal**
+5. [**Binary Tree Level Order Traversal**](https://github.com/kranthi561/coding-interview-questions-answers/tree/main/Tree/05-binary-tree-level-order-traversal.md)
   Return node values grouped by level, from root to leaves.
    BFS with a queue: process all nodes at the current level, collect their values, then enqueue their children for the next level.
-6. **Serialize and Deserialize Binary Tree**
+6. [**Serialize and Deserialize Binary Tree**](https://github.com/kranthi561/coding-interview-questions-answers/tree/main/Tree/06-serialize-and-deserialize-binary-tree.md)
   Convert a binary tree to a string and reconstruct the original tree from that string.
    Pre-order DFS serializes node values with null markers; deserialization replays the same pre-order sequence to rebuild the tree.
-7. **Subtree of Another Tree**
+7. [**Subtree of Another Tree**](https://github.com/kranthi561/coding-interview-questions-answers/tree/main/Tree/07-subtree-of-another-tree.md)
   Check if a given tree `subRoot` is an identical subtree of tree `root`.
    DFS visits every node of root; at each node call `isSameTree(node, subRoot)` to check for an exact structural match.
-8. **Construct Binary Tree from Preorder and Inorder Traversal**
+8. [**Construct Binary Tree from Preorder and Inorder Traversal**](https://github.com/kranthi561/coding-interview-questions-answers/tree/main/Tree/08-construct-binary-tree-from-preorder-inorder.md)
   Rebuild a binary tree uniquely given its preorder and inorder traversal sequences.
    The first preorder element is always the root; its position in inorder splits the array into left and right subtrees — recurse.
-9. **Validate Binary Search Tree**
+9. [**Validate Binary Search Tree**](https://github.com/kranthi561/coding-interview-questions-answers/tree/main/Tree/09-validate-binary-search-tree.md)
   Verify that a binary tree satisfies the BST property: left subtree values < node < right subtree values, for all nodes.
    DFS propagates valid (min, max) bounds; if any node's value falls outside its bounds the tree is invalid.
-10. **Kth Smallest Element in a BST**
+10. [**Kth Smallest Element in a BST**](https://github.com/kranthi561/coding-interview-questions-answers/tree/main/Tree/10-kth-smallest-element-in-bst.md)
   Find the kth smallest value in a Binary Search Tree.
     In-order traversal (left → node → right) visits BST nodes in ascending order; decrement a counter and return at k = 0.
-11. **Lowest Common Ancestor of a BST**
+11. [**Lowest Common Ancestor of a BST**](https://github.com/kranthi561/coding-interview-questions-answers/tree/main/Tree/11-lowest-common-ancestor-of-bst.md)
   Find the lowest (deepest) common ancestor of two given nodes in a BST.
     Navigate left if both targets are smaller than current, right if both are larger; otherwise the current node is the LCA.
-12. **Implement Trie (Prefix Tree)**
+12. [**Implement Trie (Prefix Tree)**](https://github.com/kranthi561/coding-interview-questions-answers/tree/main/Tree/12-implement-trie.md)
   Build a trie supporting `insert`, `search` (exact), and `startsWith` (prefix) operations.
     Each node holds a children map (character → node) and an `isEndOfWord` flag; insert/search traverse character by character.
-13. **Design Add and Search Words Data Structure**
+13. [**Design Add and Search Words Data Structure**](https://github.com/kranthi561/coding-interview-questions-answers/tree/main/Tree/13-design-add-and-search-words.md)
   Support `addWord` and `searchWord` where `'.'` in a search pattern matches any single character.
     Trie with DFS for wildcard: when `'.'` is encountered, recursively try all existing children nodes.
-14. **Word Search II**
+14. [**Word Search II**](https://github.com/kranthi561/coding-interview-questions-answers/tree/main/Tree/14-word-search-ii.md)
   Find all words from a given list that exist as paths in a 2D character grid.
     Build a trie from all target words; DFS on the grid prunes entire branches early using the trie, far faster than searching each word separately.
 
 ---
 
-## 10. Heap (3)
+## 10. [Heap (3)](https://github.com/kranthi561/coding-interview-questions-answers/tree/main/Heap)
 
-1. **Top K Frequent Elements**
+1. [**Top K Frequent Elements**](https://github.com/kranthi561/coding-interview-questions-answers/blob/main/Heap/01-top-k-frequent-elements.md)
   Return the k most frequently occurring elements in an integer array.
    Count frequencies with a hash map, then use a min-heap of size k — evict the lowest-frequency element whenever the heap exceeds k.
-2. **Find Median from Data Stream**
+2. [**Find Median from Data Stream**](https://github.com/kranthi561/coding-interview-questions-answers/blob/main/Heap/02-find-median-from-data-stream.md)
   Design a data structure that supports adding integers one at a time and querying the current median efficiently.
    Maintain a max-heap for the lower half and a min-heap for the upper half; rebalance after each insertion so sizes differ by at most one.

@@ -2,8 +2,7 @@
 
 ---
 
-<details>
-<summary><strong>1. What is meant by Pacific Atlantic Water Flow?</strong></summary>
+1. What is meant by Pacific Atlantic Water Flow?
 
 ## What is Pacific Atlantic Water Flow?
 
@@ -33,12 +32,10 @@ heights = [[1,2,2,3,5],
 Output: [[0,4],[1,3],[1,4],[2,2],[3,0],[3,1],[4,0]]
 ```
 
-</details>
 
 ---
 
-<details>
-<summary><strong>2. Clarify Requirements — Functional and Non-Functional</strong></summary>
+2. Clarify Requirements — Functional and Non-Functional
 
 ## Requirements
 
@@ -64,12 +61,10 @@ Output: [[0,4],[1,3],[1,4],[2,2],[3,0],[3,1],[4,0]]
 - Can a border cell be in the result? → Yes, border cells are adjacent to an ocean.
 - What if the matrix is 1×1? → Always returns `[[0,0]]`.
 
-</details>
 
 ---
 
-<details>
-<summary><strong>3. Estimate Time and Space Complexity</strong></summary>
+3. Estimate Time and Space Complexity
 
 ## Complexity Analysis
 
@@ -89,12 +84,10 @@ Output: [[0,4],[1,3],[1,4],[2,2],[3,0],[3,1],[4,0]]
 
 **Key observation:** Instead of asking "can water from cell (r,c) reach the ocean?", reverse the question: "can water flow **from** the ocean **inward** to (r,c)?" Flow inward by climbing uphill (≥ instead of ≤).
 
-</details>
 
 ---
 
-<details>
-<summary><strong>4. Which Algorithm and Why?</strong></summary>
+4. Which Algorithm and Why?
 
 ## Algorithm: Reverse BFS from Both Ocean Borders
 
@@ -123,12 +116,10 @@ The answer is the **intersection**: cells reachable from both Pacific borders AN
 5. Collect cells where both pacific[r][c] and atlantic[r][c] are true.
 ```
 
-</details>
 
 ---
 
-<details>
-<summary><strong>5. High-Level Design — Components and Data Flow</strong></summary>
+5. High-Level Design — Components and Data Flow
 
 ## High-Level Design
 
@@ -171,12 +162,10 @@ Intersection (both P and A):
   [0,4], [1,3], [1,4], [2,2], [3,0], [3,1], [4,0]
 ```
 
-</details>
 
 ---
 
-<details>
-<summary><strong>6. Java Solution with Comments and Examples</strong></summary>
+6. Java Solution with Comments and Examples
 
 ## Java Implementation
 
@@ -280,12 +269,10 @@ Output: [[0, 4], [1, 3], [1, 4], [2, 2], [3, 0], [3, 1], [4, 0]]
 1x1 grid [[1]]: [[0, 0]]
 ```
 
-</details>
 
 ---
 
-<details>
-<summary><strong>7. Python Solution with Comments and Examples</strong></summary>
+7. Python Solution with Comments and Examples
 
 ## Python Implementation
 
@@ -368,12 +355,10 @@ Output: [[0, 4], [1, 3], [1, 4], [2, 2], [3, 0], [3, 1], [4, 0]]
 All same: [[0, 0], [0, 1], [1, 0], [1, 1]]
 ```
 
-</details>
 
 ---
 
-<details>
-<summary><strong>8. Interview Questions and Answers</strong></summary>
+8. Interview Questions and Answers
 
 ## Q&A
 
@@ -395,12 +380,10 @@ A: They represent cells directly touching an ocean — water can trivially flow 
 **Q: How would you extend this to flow through obstacles?**
 A: Add a condition to skip obstacle cells (e.g., `heights[nr][nc] == -1`) during BFS expansion.
 
-</details>
 
 ---
 
-<details>
-<summary><strong>9. Summary</strong></summary>
+9. Summary
 
 ## Summary
 
@@ -421,4 +404,3 @@ A: Add a condition to skip obstacle cells (e.g., `heights[nr][nc] == -1`) during
 - Any "can X reach both A and B?" graph problem where starting from both targets is cheaper.
 - Related: Number of Islands, Surrounded Regions, Shortest Path in a Grid.
 
-</details>

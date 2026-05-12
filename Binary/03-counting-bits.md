@@ -2,8 +2,7 @@
 
 ---
 
-<details>
-<summary><strong>1. What is meant by Counting Bits?</strong></summary>
+1. What is meant by Counting Bits?
 
 ## What is Counting Bits?
 
@@ -29,12 +28,10 @@ Explanation:
   5 → 101 → 2 ones
 ```
 
-</details>
 
 ---
 
-<details>
-<summary><strong>2. Clarify Requirements</strong></summary>
+2. Clarify Requirements
 
 ## Requirements
 
@@ -55,12 +52,10 @@ Explanation:
 - Is 0 always included? → Yes, output has n+1 elements from index 0 to n.
 - Must it be O(n) or is O(n log n) acceptable? → O(n) is the follow-up challenge.
 
-</details>
 
 ---
 
-<details>
-<summary><strong>3. Time and Space Complexity</strong></summary>
+3. Time and Space Complexity
 
 ## Complexity Analysis
 
@@ -72,12 +67,10 @@ Explanation:
 
 **Why O(n)?** The DP recurrence computes each `ans[i]` in O(1) using a previously computed value — no per-number loop needed.
 
-</details>
 
 ---
 
-<details>
-<summary><strong>4. Algorithm Choice and Why</strong></summary>
+4. Algorithm Choice and Why
 
 ## Algorithm: Dynamic Programming with Bit Relationship
 
@@ -111,12 +104,10 @@ ans[i] = ans[i & (i-1)] + 1
 ### Why DP?
 The problem has **overlapping subproblems** — the bit count of `i` depends on the bit count of a smaller number. Memoizing these in an array makes each step O(1).
 
-</details>
 
 ---
 
-<details>
-<summary><strong>5. High-Level Design</strong></summary>
+5. High-Level Design
 
 ## High-Level Design
 
@@ -149,12 +140,10 @@ i & 1  = 0  (last bit is 0)
 ans[6] = ans[3] + 0 = 2 + 0 = 2  ✓  (110 has two 1-bits)
 ```
 
-</details>
 
 ---
 
-<details>
-<summary><strong>6. Java Solution with Explanation</strong></summary>
+6. Java Solution with Explanation
 
 ## Java Implementation
 
@@ -225,12 +214,10 @@ n=5: 0 1 1 2 1 2
 n=8: 0 1 1 2 1 2 2 3 1
 ```
 
-</details>
 
 ---
 
-<details>
-<summary><strong>7. Python Solution with Explanation</strong></summary>
+7. Python Solution with Explanation
 
 ## Python Implementation
 
@@ -280,12 +267,10 @@ n=8: [0, 1, 1, 2, 1, 2, 2, 3, 1]
 Alt n=5: [0, 1, 1, 2, 1, 2]
 ```
 
-</details>
 
 ---
 
-<details>
-<summary><strong>8. Interview Q&A</strong></summary>
+8. Interview Q&A
 
 ## Q&A
 
@@ -304,12 +289,10 @@ A: The output array itself is O(n) and unavoidable. The only extra space is O(1)
 **Q: Does the pattern `[0,1,1,2,1,2,2,3,1,2,...]` have a name?**
 A: Yes — this is the **Stern–Brocot sequence** variant related to Hamming weight. The sequence for powers of 2 always has exactly one 1-bit, and numbers between powers of 2 build on smaller values.
 
-</details>
 
 ---
 
-<details>
-<summary><strong>9. Summary</strong></summary>
+9. Summary
 
 ## Summary
 
@@ -329,4 +312,3 @@ A: Yes — this is the **Stern–Brocot sequence** variant related to Hamming we
 - Hamming Distance — XOR two numbers and count 1-bits
 - Power of Two — `n > 0 && (n & (n-1)) == 0`
 
-</details>

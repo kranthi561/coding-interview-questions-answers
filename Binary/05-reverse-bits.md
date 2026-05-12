@@ -2,8 +2,7 @@
 
 ---
 
-<details>
-<summary><strong>1. What is meant by Reverse Bits?</strong></summary>
+1. What is meant by Reverse Bits?
 
 ## What is Reverse Bits?
 
@@ -22,12 +21,10 @@ Decimal: 4294967293 → 3221225471
 
 > This reverses the **binary representation** bit by bit — not the decimal digits.
 
-</details>
 
 ---
 
-<details>
-<summary><strong>2. Clarify Requirements</strong></summary>
+2. Clarify Requirements
 
 ## Requirements
 
@@ -49,12 +46,10 @@ Decimal: 4294967293 → 3221225471
 - Should leading zeros be preserved? → Yes — reversing `1` (00..001) gives `10..000` (2147483648).
 - What if called many times? → Can optimise with a cache (byte-level reverse lookup table).
 
-</details>
 
 ---
 
-<details>
-<summary><strong>3. Time and Space Complexity</strong></summary>
+3. Time and Space Complexity
 
 ## Complexity Analysis
 
@@ -66,12 +61,10 @@ Decimal: 4294967293 → 3221225471
 
 All approaches are O(1) because the input is fixed at 32 bits.
 
-</details>
 
 ---
 
-<details>
-<summary><strong>4. Algorithm Choice and Why</strong></summary>
+4. Algorithm Choice and Why
 
 ## Algorithm: Bit-by-Bit Reversal
 
@@ -104,12 +97,10 @@ Reversed: 1011 = 11  ✓  (1101 reversed is 1011)
 ### Alternative: Divide and Conquer (Swap Groups of Bits)
 Swap adjacent bits, then pairs, then nibbles, then bytes — in 5 masking steps. This is branchless and very fast but harder to read.
 
-</details>
 
 ---
 
-<details>
-<summary><strong>5. High-Level Design</strong></summary>
+5. High-Level Design
 
 ## High-Level Design
 
@@ -139,12 +130,10 @@ n:      [b31][b30]...[b1][b0]   (read right-to-left)
 result: [b0] [b1] ...[b30][b31] (written left-to-right)
 ```
 
-</details>
 
 ---
 
-<details>
-<summary><strong>6. Java Solution with Explanation</strong></summary>
+6. Java Solution with Explanation
 
 ## Java Implementation
 
@@ -218,12 +207,10 @@ Input:  4294967293 (unsigned)
 Output: 3221225471 (unsigned)
 ```
 
-</details>
 
 ---
 
-<details>
-<summary><strong>7. Python Solution with Explanation</strong></summary>
+7. Python Solution with Explanation
 
 ## Python Implementation
 
@@ -287,12 +274,10 @@ Output: 3221225471
 Builtin: 964176192
 ```
 
-</details>
 
 ---
 
-<details>
-<summary><strong>8. Interview Q&A</strong></summary>
+8. Interview Q&A
 
 ## Q&A
 
@@ -311,12 +296,10 @@ A: Swap bit-level groups in 5 rounds: halves → bytes → nibbles → bit pairs
 **Q: What is the real-world application of bit reversal?**
 A: Bit reversal is used in **Fast Fourier Transform (FFT)** algorithms to reorder elements (bit-reversal permutation). It also appears in network byte-order conversion and certain hash functions.
 
-</details>
 
 ---
 
-<details>
-<summary><strong>9. Summary</strong></summary>
+9. Summary
 
 ## Summary
 
@@ -338,4 +321,3 @@ A: Bit reversal is used in **Fast Fourier Transform (FFT)** algorithms to reorde
 | Divide & conquer | Low | Best | Performance-critical code |
 | Lookup table | Medium | Excellent | Repeated calls |
 
-</details>

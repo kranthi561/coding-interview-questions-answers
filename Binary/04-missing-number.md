@@ -2,8 +2,7 @@
 
 ---
 
-<details>
-<summary><strong>1. What is meant by Missing Number?</strong></summary>
+1. What is meant by Missing Number?
 
 ## What is Missing Number?
 
@@ -24,12 +23,10 @@ Output: 8
 Explanation: n=9, range is [0..9]. The number 8 is missing.
 ```
 
-</details>
 
 ---
 
-<details>
-<summary><strong>2. Clarify Requirements</strong></summary>
+2. Clarify Requirements
 
 ## Requirements
 
@@ -51,12 +48,10 @@ Explanation: n=9, range is [0..9]. The number 8 is missing.
 - Are all numbers distinct? → Yes.
 - Can the missing number be 0 or n? → Yes, the endpoints are valid answers.
 
-</details>
 
 ---
 
-<details>
-<summary><strong>3. Time and Space Complexity</strong></summary>
+3. Time and Space Complexity
 
 ## Complexity Analysis
 
@@ -69,12 +64,10 @@ Explanation: n=9, range is [0..9]. The number 8 is missing.
 
 Both the Gauss formula and XOR approaches achieve optimal O(n) time and O(1) space.
 
-</details>
 
 ---
 
-<details>
-<summary><strong>4. Algorithm Choice and Why</strong></summary>
+4. Algorithm Choice and Why
 
 ## Algorithm: Gauss Formula (Primary) + XOR (Alternative)
 
@@ -113,12 +106,10 @@ remaining = missing number
 ### Watch Out for Overflow
 For large `n`, `n * (n + 1)` can overflow a 32-bit integer. In Java use `long`; in Python integers are arbitrary precision.
 
-</details>
 
 ---
 
-<details>
-<summary><strong>5. High-Level Design</strong></summary>
+5. High-Level Design
 
 ## High-Level Design
 
@@ -157,12 +148,10 @@ Result: 2 ✓
 Only 2 (present in indices but not in nums) remains.
 ```
 
-</details>
 
 ---
 
-<details>
-<summary><strong>6. Java Solution with Explanation</strong></summary>
+6. Java Solution with Explanation
 
 ## Java Implementation
 
@@ -231,12 +220,10 @@ XOR approach:
 Input [3,0,1]:  2
 ```
 
-</details>
 
 ---
 
-<details>
-<summary><strong>7. Python Solution with Explanation</strong></summary>
+7. Python Solution with Explanation
 
 ## Python Implementation
 
@@ -289,12 +276,10 @@ XOR:
 2
 ```
 
-</details>
 
 ---
 
-<details>
-<summary><strong>8. Interview Q&A</strong></summary>
+8. Interview Q&A
 
 ## Q&A
 
@@ -313,12 +298,10 @@ A: The Gauss formula only works for a single missing number. For multiple missin
 **Q: Can the missing number be 0 or n?**
 A: Yes. If `nums = [1, 2, 3]`, the missing number is 0. If `nums = [0, 1, 2]`, the missing number is 3. Both approaches handle this correctly.
 
-</details>
 
 ---
 
-<details>
-<summary><strong>9. Summary</strong></summary>
+9. Summary
 
 ## Summary
 
@@ -334,4 +317,3 @@ A: Yes. If `nums = [1, 2, 3]`, the missing number is 0. If `nums = [0, 1, 2]`, t
 ### Core Pattern
 > When a set is "almost complete" with exactly one element missing, the Gauss formula or XOR cancellation are the go-to O(1)-space approaches.
 
-</details>

@@ -2,8 +2,7 @@
 
 ---
 
-<details>
-<summary><strong>1. What is meant by Course Schedule?</strong></summary>
+1. What is meant by Course Schedule?
 
 ## What is Course Schedule?
 
@@ -31,12 +30,10 @@ Output: false
 Explanation: Cycle: 0 → 1 → 0
 ```
 
-</details>
 
 ---
 
-<details>
-<summary><strong>2. Clarify Requirements — Functional and Non-Functional</strong></summary>
+2. Clarify Requirements — Functional and Non-Functional
 
 ## Requirements
 
@@ -61,12 +58,10 @@ Explanation: Cycle: 0 → 1 → 0
 - Is the graph directed? → Yes (prerequisite direction matters).
 - Do we need the actual order? → No (that's Course Schedule II).
 
-</details>
 
 ---
 
-<details>
-<summary><strong>3. Estimate Time and Space Complexity</strong></summary>
+3. Estimate Time and Space Complexity
 
 ## Complexity Analysis
 
@@ -86,12 +81,10 @@ Explanation: Cycle: 0 → 1 → 0
 
 **Both are O(V+E)**. The choice is style: DFS detects cycles directly; Kahn's algorithm detects them indirectly (if not all nodes are processed, there's a cycle).
 
-</details>
 
 ---
 
-<details>
-<summary><strong>4. Which Algorithm and Why?</strong></summary>
+4. Which Algorithm and Why?
 
 ## Algorithm: DFS with 3-State Node Coloring
 
@@ -113,12 +106,10 @@ In directed graphs, a node can be reachable via multiple paths. 2-state (visited
 
 A cycle is detected when DFS reaches a node in state **1** (currently on the stack) — this means we found a back edge.
 
-</details>
 
 ---
 
-<details>
-<summary><strong>5. High-Level Design — Components and Data Flow</strong></summary>
+5. High-Level Design — Components and Data Flow
 
 ## High-Level Design
 
@@ -154,12 +145,10 @@ Cycle example: [[0,1],[1,0]]
 DFS from 0: state[0]=1 → visit 1: state[1]=1 → visit 0: state[0]=1 → CYCLE! false
 ```
 
-</details>
 
 ---
 
-<details>
-<summary><strong>6. Java Solution with Comments and Examples</strong></summary>
+6. Java Solution with Comments and Examples
 
 ## Java Implementation
 
@@ -280,12 +269,10 @@ numCourses=3, prereqs=[[0,1],[1,2],[2,0]]
 Output: false
 ```
 
-</details>
 
 ---
 
-<details>
-<summary><strong>7. Python Solution with Comments and Examples</strong></summary>
+7. Python Solution with Comments and Examples
 
 ## Python Implementation
 
@@ -386,12 +373,10 @@ if __name__ == "__main__":
   DFS: False, Kahn: False, Expected: False
 ```
 
-</details>
 
 ---
 
-<details>
-<summary><strong>8. Interview Questions and Answers</strong></summary>
+8. Interview Questions and Answers
 
 ## Q&A
 
@@ -413,12 +398,10 @@ A: Dependency resolution — package managers (npm, Maven) use topological sort 
 **Q: When would in-degree (Kahn's) be preferred over DFS?**
 A: Kahn's is naturally iterative (no recursion stack overflow), and it produces the topological order as a byproduct. DFS is more compact for just detecting cycles.
 
-</details>
 
 ---
 
-<details>
-<summary><strong>9. Summary</strong></summary>
+9. Summary
 
 ## Summary
 
@@ -440,4 +423,3 @@ A: Kahn's is naturally iterative (no recursion stack overflow), and it produces 
 - Task scheduling, build systems, dependency resolution.
 - Related: Course Schedule II, Alien Dictionary, Task Scheduler.
 
-</details>

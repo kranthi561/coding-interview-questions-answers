@@ -2,8 +2,7 @@
 
 ---
 
-<details>
-<summary><strong>1. What is meant by Decode Ways?</strong></summary>
+1. What is meant by Decode Ways?
 
 ## What is Decode Ways?
 
@@ -30,12 +29,10 @@ Explanation:
   "2 26"  → BZ
 ```
 
-</details>
 
 ---
 
-<details>
-<summary><strong>2. Clarify Requirements — Functional and Non-Functional</strong></summary>
+2. Clarify Requirements — Functional and Non-Functional
 
 ## Requirements
 
@@ -62,12 +59,10 @@ Explanation:
 - Are numbers beyond 26 valid two-digit codes? → No, only 10–26.
 - Is the answer always a valid integer? → Yes, fits in 32-bit int for n ≤ 100.
 
-</details>
 
 ---
 
-<details>
-<summary><strong>3. Estimate Time and Space Complexity</strong></summary>
+3. Estimate Time and Space Complexity
 
 ## Complexity Analysis
 
@@ -99,12 +94,10 @@ Explanation:
 | **Time** | O(n) |
 | **Space** | O(1) — only prev and curr |
 
-</details>
 
 ---
 
-<details>
-<summary><strong>4. Which Algorithm and Why?</strong></summary>
+4. Which Algorithm and Why?
 
 ## Algorithm: Bottom-Up Dynamic Programming
 
@@ -135,12 +128,10 @@ For i from 2 to n:
         dp[i] += dp[i-2]   // s[i-2..i-1] decodes as a two-character code
 ```
 
-</details>
 
 ---
 
-<details>
-<summary><strong>5. High-Level Design — Components and Data Flow</strong></summary>
+5. High-Level Design — Components and Data Flow
 
 ## High-Level Design
 
@@ -170,12 +161,10 @@ i=3: oneDigit=6 (≠0) → dp[3] += dp[2] = 2
 Output: dp[3] = 3
 ```
 
-</details>
 
 ---
 
-<details>
-<summary><strong>6. Java Solution with Comments and Examples</strong></summary>
+6. Java Solution with Comments and Examples
 
 ## Java Implementation
 
@@ -273,12 +262,10 @@ Input: "2101"
 Output: 1
 ```
 
-</details>
 
 ---
 
-<details>
-<summary><strong>7. Python Solution with Comments and Examples</strong></summary>
+7. Python Solution with Comments and Examples
 
 ## Python Implementation
 
@@ -350,12 +337,10 @@ if __name__ == "__main__":
 [PASS] s='111' → Output: 3, Expected: 3
 ```
 
-</details>
 
 ---
 
-<details>
-<summary><strong>8. Interview Questions and Answers</strong></summary>
+8. Interview Questions and Answers
 
 ## Q&A
 
@@ -377,12 +362,10 @@ A: For `s = "11111...1"` (100 ones), the answer follows the Fibonacci sequence, 
 **Q: How does this relate to Climbing Stairs?**
 A: The structure is identical: at each step, combine the count from one step back and two steps back. The difference is the validity checks (`digit != 0`, `10 <= twoDigit <= 26`) that can block accumulation.
 
-</details>
 
 ---
 
-<details>
-<summary><strong>9. Summary</strong></summary>
+9. Summary
 
 ## Summary
 
@@ -403,4 +386,3 @@ A: The structure is identical: at each step, combine the count from one step bac
 - Counting arrangements with conditional step sizes.
 - Related: Climbing Stairs, Word Break, Fibonacci variants, Number of Ways to Decode.
 
-</details>

@@ -2,8 +2,7 @@
 
 ---
 
-<details>
-<summary><strong>1. What is meant by Contains Duplicate?</strong></summary>
+1. What is meant by Contains Duplicate?
 
 ## What is Contains Duplicate?
 
@@ -27,12 +26,10 @@ Input:  nums = [1, 1, 1, 3, 3, 4, 3, 2, 4, 2]
 Output: true
 ```
 
-</details>
 
 ---
 
-<details>
-<summary><strong>2. Clarify Requirements</strong></summary>
+2. Clarify Requirements
 
 ## Requirements
 
@@ -53,12 +50,10 @@ Output: true
 - What integer range? → Any 32-bit integers
 - Do we need to find which element duplicates? → No, just return true/false
 
-</details>
 
 ---
 
-<details>
-<summary><strong>3. Time and Space Complexity</strong></summary>
+3. Time and Space Complexity
 
 ## Complexity Analysis
 
@@ -70,12 +65,10 @@ Output: true
 
 **Hash Set:** Insert each element; if insertion fails (element already exists), return `true`.
 
-</details>
 
 ---
 
-<details>
-<summary><strong>4. Algorithm Choice and Why</strong></summary>
+4. Algorithm Choice and Why
 
 ## Algorithm: Hash Set
 
@@ -96,12 +89,10 @@ Return false
 ### Why Not Sorting?
 Sorting changes the index structure and takes O(n log n). Hash set is faster and simpler.
 
-</details>
 
 ---
 
-<details>
-<summary><strong>5. High-Level Design</strong></summary>
+5. High-Level Design
 
 ## High-Level Design
 
@@ -115,12 +106,10 @@ Step 3: num=3 → set={1,2}, not in set → add → set={1,2,3}
 Step 4: num=1 → set={1,2,3}, IN SET! → return true
 ```
 
-</details>
 
 ---
 
-<details>
-<summary><strong>6. Java Solution with Explanation</strong></summary>
+6. Java Solution with Explanation
 
 ## Java Implementation
 
@@ -167,12 +156,10 @@ false
 true
 ```
 
-</details>
 
 ---
 
-<details>
-<summary><strong>7. Python Solution with Explanation</strong></summary>
+7. Python Solution with Explanation
 
 ## Python Implementation
 
@@ -215,12 +202,10 @@ False
 True
 ```
 
-</details>
 
 ---
 
-<details>
-<summary><strong>8. Interview Q&A</strong></summary>
+8. Interview Q&A
 
 ## Q&A
 
@@ -236,12 +221,10 @@ A: Return false. The loop doesn't execute; `set` is empty; we return false.
 **Q: What if array has one element?**  
 A: Return false. One element can't duplicate itself.
 
-</details>
 
 ---
 
-<details>
-<summary><strong>9. Summary</strong></summary>
+9. Summary
 
 ## Summary
 
@@ -253,4 +236,3 @@ A: Return false. One element can't duplicate itself.
 | **Space Complexity** | O(n) |
 | **Key Insight** | Set insertion failure = duplicate found |
 
-</details>

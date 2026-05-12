@@ -2,8 +2,7 @@
 
 ---
 
-<details>
-<summary><strong>1. What is meant by Merge Intervals?</strong></summary>
+1. What is meant by Merge Intervals?
 
 ## What is Merge Intervals?
 
@@ -31,12 +30,10 @@ Output: [[1,5]]
 Explanation: [1,4] and [4,5] touch at 4 → merge (touching = overlapping)
 ```
 
-</details>
 
 ---
 
-<details>
-<summary><strong>2. Clarify Requirements — Functional and Non-Functional</strong></summary>
+2. Clarify Requirements — Functional and Non-Functional
 
 ## Requirements
 
@@ -62,12 +59,10 @@ Explanation: [1,4] and [4,5] touch at 4 → merge (touching = overlapping)
 - Can start and end be equal (single-point interval)? → Yes.
 - Can we modify the input? → Yes.
 
-</details>
 
 ---
 
-<details>
-<summary><strong>3. Estimate Time and Space Complexity</strong></summary>
+3. Estimate Time and Space Complexity
 
 ## Complexity Analysis
 
@@ -89,12 +84,10 @@ Explanation: [1,4] and [4,5] touch at 4 → merge (touching = overlapping)
 
 **Can we do O(n)?** Only if the intervals are already sorted. In the general unsorted case, O(n log n) is optimal because we need to sort.
 
-</details>
 
 ---
 
-<details>
-<summary><strong>4. Which Algorithm and Why?</strong></summary>
+4. Which Algorithm and Why?
 
 ## Algorithm: Sort by Start Time + Linear Merge
 
@@ -123,12 +116,10 @@ For each remaining interval:
 **Why `max(last.end, current.end)`?**
 One interval could be completely inside another: `[1,10]` and `[2,5]` → merged end is 10, not 5.
 
-</details>
 
 ---
 
-<details>
-<summary><strong>5. High-Level Design — Components and Data Flow</strong></summary>
+5. High-Level Design — Components and Data Flow
 
 ## High-Level Design
 
@@ -169,12 +160,10 @@ result = [[1,4]]
 Output: [[1,5]]
 ```
 
-</details>
 
 ---
 
-<details>
-<summary><strong>6. Java Solution with Comments and Examples</strong></summary>
+6. Java Solution with Comments and Examples
 
 ## Java Implementation
 
@@ -261,12 +250,10 @@ Example 5: [[1, 10]]
 Example 6: [[1, 6], [8, 10], [15, 18]]
 ```
 
-</details>
 
 ---
 
-<details>
-<summary><strong>7. Python Solution with Comments and Examples</strong></summary>
+7. Python Solution with Comments and Examples
 
 ## Python Implementation
 
@@ -333,12 +320,10 @@ if __name__ == "__main__":
 [PASS] Input: [[15, 18], [1, 3], [2, 6], [8, 10]] → Output: [[1, 6], [8, 10], [15, 18]]
 ```
 
-</details>
 
 ---
 
-<details>
-<summary><strong>8. Interview Questions and Answers</strong></summary>
+8. Interview Questions and Answers
 
 ## Q&A
 
@@ -360,12 +345,10 @@ A: Merge Intervals handles an unsorted list with multiple overlaps. Insert Inter
 **Q: What if all intervals overlap?**
 A: The result list ends up with a single interval: `[min_start, max_end]`. The merge step keeps extending the last interval's end for every subsequent interval.
 
-</details>
 
 ---
 
-<details>
-<summary><strong>9. Summary</strong></summary>
+9. Summary
 
 ## Summary
 
@@ -386,4 +369,3 @@ A: The result list ends up with a single interval: `[min_start, max_end]`. The m
 - Any interval merging or deduplication task.
 - Related: Insert Interval, Non-overlapping Intervals, Interval List Intersections, Employee Free Time.
 
-</details>

@@ -2,8 +2,7 @@
 
 ---
 
-<details>
-<summary><strong>1. What is meant by House Robber?</strong></summary>
+1. What is meant by House Robber?
 
 ## What is House Robber?
 
@@ -27,12 +26,10 @@ Output: 12
 Explanation: Rob houses 0, 2, 4 → 2 + 9 + 1 = 12
 ```
 
-</details>
 
 ---
 
-<details>
-<summary><strong>2. Clarify Requirements — Functional and Non-Functional</strong></summary>
+2. Clarify Requirements — Functional and Non-Functional
 
 ## Requirements
 
@@ -58,12 +55,10 @@ Explanation: Rob houses 0, 2, 4 → 2 + 9 + 1 = 12
 - Can we rob zero houses? → Yes (if all values are 0, result is 0).
 - Houses arranged in a line or a circle? → Line (circle = House Robber II).
 
-</details>
 
 ---
 
-<details>
-<summary><strong>3. Estimate Time and Space Complexity</strong></summary>
+3. Estimate Time and Space Complexity
 
 ## Complexity Analysis
 
@@ -90,12 +85,10 @@ Explanation: Rob houses 0, 2, 4 → 2 + 9 + 1 = 12
 
 **Why O(1) space?** At each step, we only need the two most recent DP values — no need to store the entire array.
 
-</details>
 
 ---
 
-<details>
-<summary><strong>4. Which Algorithm and Why?</strong></summary>
+4. Which Algorithm and Why?
 
 ## Algorithm: Space-Optimized Dynamic Programming
 
@@ -121,12 +114,10 @@ Meaning: at house `i`, either:
 
 Since we only need `dp[i-1]` and `dp[i-2]`, use two variables `prev` and `curr`.
 
-</details>
 
 ---
 
-<details>
-<summary><strong>5. High-Level Design — Components and Data Flow</strong></summary>
+5. High-Level Design — Components and Data Flow
 
 ## High-Level Design
 
@@ -154,12 +145,10 @@ House 4 (val=1): new_curr = max(curr=11, prev=11 + 1) = 12 → prev=11, curr=12
 Output: 12
 ```
 
-</details>
 
 ---
 
-<details>
-<summary><strong>6. Java Solution with Comments and Examples</strong></summary>
+6. Java Solution with Comments and Examples
 
 ## Java Implementation
 
@@ -236,12 +225,10 @@ Input: [4,4,4,4,4]
 Output: 12
 ```
 
-</details>
 
 ---
 
-<details>
-<summary><strong>7. Python Solution with Comments and Examples</strong></summary>
+7. Python Solution with Comments and Examples
 
 ## Python Implementation
 
@@ -298,12 +285,10 @@ if __name__ == "__main__":
 [PASS] nums=[0, 0, 0] → Output: 0, Expected: 0
 ```
 
-</details>
 
 ---
 
-<details>
-<summary><strong>8. Interview Questions and Answers</strong></summary>
+8. Interview Questions and Answers
 
 ## Q&A
 
@@ -325,12 +310,10 @@ A: Run the linear House Robber algorithm twice: once on `nums[0..n-2]` (exclude 
 **Q: Is there a greedy solution?**
 A: No. Consider `[3, 10, 3, 1, 2]`. Greedy (always pick highest available non-adjacent) picks 10+2=12, but 3+3+2=8 or 10+1=11. The greedy picks 10 then 2 for 12, but DP confirms this is correct here. However, in general, greedy can fail (e.g., `[5, 1, 1, 5]`: greedy picks 5+1=6, DP finds 5+5=10).
 
-</details>
 
 ---
 
-<details>
-<summary><strong>9. Summary</strong></summary>
+9. Summary
 
 ## Summary
 
@@ -351,4 +334,3 @@ A: No. Consider `[3, 10, 3, 1, 2]`. Greedy (always pick highest available non-ad
 - Any "maximize/minimize over a sequence with an exclusion constraint" problem.
 - Related: House Robber II (circular), Maximum Alternating Subsequence, Stock Buy/Sell with Cooldown.
 
-</details>

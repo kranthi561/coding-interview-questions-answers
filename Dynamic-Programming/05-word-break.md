@@ -2,8 +2,7 @@
 
 ---
 
-<details>
-<summary><strong>1. What is meant by Word Break?</strong></summary>
+1. What is meant by Word Break?
 
 ## What is Word Break?
 
@@ -28,12 +27,10 @@ Output: true
 Explanation: "leetcode" = "leet" + "code"
 ```
 
-</details>
 
 ---
 
-<details>
-<summary><strong>2. Clarify Requirements — Functional and Non-Functional</strong></summary>
+2. Clarify Requirements — Functional and Non-Functional
 
 ## Requirements
 
@@ -59,12 +56,10 @@ Explanation: "leetcode" = "leet" + "code"
 - Is the dictionary case-sensitive? → Yes (assume lowercase).
 - Can `s` be empty? → Constraints say length ≥ 1.
 
-</details>
 
 ---
 
-<details>
-<summary><strong>3. Estimate Time and Space Complexity</strong></summary>
+3. Estimate Time and Space Complexity
 
 ## Complexity Analysis
 
@@ -91,12 +86,10 @@ Explanation: "leetcode" = "leet" + "code"
 
 **With a HashSet for word lookup:** checking if a substring is in the dictionary is O(L) where L = substring length (hashing cost). Total: O(n² × L).
 
-</details>
 
 ---
 
-<details>
-<summary><strong>4. Which Algorithm and Why?</strong></summary>
+4. Which Algorithm and Why?
 
 ## Algorithm: Bottom-Up Dynamic Programming with HashSet
 
@@ -123,12 +116,10 @@ dp[i] = true if:
 
 Check all split points `j` for each `i`. If you find a valid `j`, mark `dp[i] = true`.
 
-</details>
 
 ---
 
-<details>
-<summary><strong>5. High-Level Design — Components and Data Flow</strong></summary>
+5. High-Level Design — Components and Data Flow
 
 ## High-Level Design
 
@@ -156,12 +147,10 @@ dp = [T, F, F, F, T, F, F, F, T]
 Output: dp[8] = true ✓
 ```
 
-</details>
 
 ---
 
-<details>
-<summary><strong>6. Java Solution with Comments and Examples</strong></summary>
+6. Java Solution with Comments and Examples
 
 ## Java Implementation
 
@@ -245,12 +234,10 @@ s=a, dict=[a]
 Output: true
 ```
 
-</details>
 
 ---
 
-<details>
-<summary><strong>7. Python Solution with Comments and Examples</strong></summary>
+7. Python Solution with Comments and Examples
 
 ## Python Implementation
 
@@ -323,12 +310,10 @@ if __name__ == "__main__":
   Output: True, Expected: True
 ```
 
-</details>
 
 ---
 
-<details>
-<summary><strong>8. Interview Questions and Answers</strong></summary>
+8. Interview Questions and Answers
 
 ## Q&A
 
@@ -350,12 +335,10 @@ A: Return all possible segmentations. Requires DFS/backtracking with memoization
 **Q: How do you handle very long strings efficiently?**
 A: Trie optimization: build a Trie from `wordDict`. Instead of `O(L)` substring hashing, traverse the Trie from each split point — prune early when no word starts with the current character.
 
-</details>
 
 ---
 
-<details>
-<summary><strong>9. Summary</strong></summary>
+9. Summary
 
 ## Summary
 
@@ -376,4 +359,3 @@ A: Trie optimization: build a Trie from `wordDict`. Instead of `O(L)` substring 
 - Any "can the entire input be partitioned into valid pieces?" problem.
 - Related: Word Break II (all solutions), Palindrome Partitioning, Decode Ways.
 
-</details>

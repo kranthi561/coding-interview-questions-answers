@@ -2,8 +2,7 @@
 
 ---
 
-<details>
-<summary><strong>1. What is meant by Container With Most Water?</strong></summary>
+1. What is meant by Container With Most Water?
 
 ## What is Container With Most Water?
 
@@ -26,12 +25,10 @@ Input:  height = [1, 1]
 Output: 1
 ```
 
-</details>
 
 ---
 
-<details>
-<summary><strong>2. Clarify Requirements</strong></summary>
+2. Clarify Requirements
 
 ## Requirements
 
@@ -52,12 +49,10 @@ Output: 1
 - Can heights be zero? → Yes, area would be zero.
 - Do we need to return the indices or just the max area? → Just the area.
 
-</details>
 
 ---
 
-<details>
-<summary><strong>3. Time and Space Complexity</strong></summary>
+3. Time and Space Complexity
 
 ## Complexity Analysis
 
@@ -68,12 +63,10 @@ Output: 1
 
 **Two pointers** move from both ends toward the center — each step guaranteed to not miss a better answer.
 
-</details>
 
 ---
 
-<details>
-<summary><strong>4. Algorithm Choice and Why</strong></summary>
+4. Algorithm Choice and Why
 
 ## Algorithm: Two Pointers
 
@@ -97,12 +90,10 @@ Else:
 ### Why This Is Correct (Proof by Contradiction)
 If we skip a pair by moving a pointer, can we miss the optimal? No — the skipped pairs would all have a smaller or equal width AND the same limiting height, so they can't beat the current area.
 
-</details>
 
 ---
 
-<details>
-<summary><strong>5. High-Level Design</strong></summary>
+5. High-Level Design
 
 ## High-Level Design
 
@@ -129,12 +120,10 @@ height = [1, 8, 6, 2, 5, 4, 8, 3, 7]
             area = 7 × 7 = 49 ← maximum
 ```
 
-</details>
 
 ---
 
-<details>
-<summary><strong>6. Java Solution with Explanation</strong></summary>
+6. Java Solution with Explanation
 
 ## Java Implementation
 
@@ -203,12 +192,10 @@ Input: [4,4,4,4]
 Output: 12
 ```
 
-</details>
 
 ---
 
-<details>
-<summary><strong>7. Python Solution with Explanation</strong></summary>
+7. Python Solution with Explanation
 
 ## Python Implementation
 
@@ -253,12 +240,10 @@ if __name__ == "__main__":
 12
 ```
 
-</details>
 
 ---
 
-<details>
-<summary><strong>8. Interview Q&A</strong></summary>
+8. Interview Q&A
 
 ## Q&A
 
@@ -277,12 +262,10 @@ A: The maximum area is `height[0] × (n-1)` (widest container). The algorithm ca
 **Q: Can this be extended to 3D (Trapping Rain Water)?**  
 A: Trapping Rain Water (LeetCode 42) is a related problem but different — it sums water trapped at each bar between walls, not the area of a single container.
 
-</details>
 
 ---
 
-<details>
-<summary><strong>9. Summary</strong></summary>
+9. Summary
 
 ## Summary
 
@@ -302,4 +285,3 @@ A: Trapping Rain Water (LeetCode 42) is a related problem but different — it s
 - The value is bounded by the smaller of the two sides
 - Sorted or ordered structure is not required
 
-</details>

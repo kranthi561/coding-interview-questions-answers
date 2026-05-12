@@ -2,8 +2,7 @@
 
 ---
 
-<details>
-<summary><strong>1. What is meant by Unique Paths?</strong></summary>
+1. What is meant by Unique Paths?
 
 ## What is Unique Paths?
 
@@ -32,12 +31,10 @@ Explanation:
   ↓ ↓ →
 ```
 
-</details>
 
 ---
 
-<details>
-<summary><strong>2. Clarify Requirements — Functional and Non-Functional</strong></summary>
+2. Clarify Requirements — Functional and Non-Functional
 
 ## Requirements
 
@@ -63,12 +60,10 @@ Explanation:
 - What if m=1 or n=1? → Only one path (a straight line).
 - Return count or actual paths? → Count only.
 
-</details>
 
 ---
 
-<details>
-<summary><strong>3. Estimate Time and Space Complexity</strong></summary>
+3. Estimate Time and Space Complexity
 
 ## Complexity Analysis
 
@@ -109,12 +104,10 @@ Explanation:
 
 **Math insight:** To reach bottom-right from top-left, you must make exactly `(m-1)` down moves and `(n-1)` right moves. Total moves = `m+n-2`. Choose which moves are "down": `C(m+n-2, m-1)`.
 
-</details>
 
 ---
 
-<details>
-<summary><strong>4. Which Algorithm and Why?</strong></summary>
+4. Which Algorithm and Why?
 
 ## Algorithm: Bottom-Up DP (or Combinatorics)
 
@@ -147,12 +140,10 @@ Unique paths = C(m+n-2, m-1) = (m+n-2)! / ((m-1)! × (n-1)!)
 
 For m=3, n=7: `C(8, 2) = 28`.
 
-</details>
 
 ---
 
-<details>
-<summary><strong>5. High-Level Design — Components and Data Flow</strong></summary>
+5. High-Level Design — Components and Data Flow
 
 ## High-Level Design
 
@@ -195,12 +186,10 @@ Path 3: ↓ ↓ →
 Total: 3
 ```
 
-</details>
 
 ---
 
-<details>
-<summary><strong>6. Java Solution with Comments and Examples</strong></summary>
+6. Java Solution with Comments and Examples
 
 ## Java Implementation
 
@@ -306,12 +295,10 @@ m=10, n=1 → 1
 m=4, n=4 → 20
 ```
 
-</details>
 
 ---
 
-<details>
-<summary><strong>7. Python Solution with Comments and Examples</strong></summary>
+7. Python Solution with Comments and Examples
 
 ## Python Implementation
 
@@ -388,12 +375,10 @@ m=10, n=1 → DP: 1, Opt: 1, Math: 1  (Expected: 1)
 m=4, n=4 → DP: 20, Opt: 20, Math: 20  (Expected: 20)
 ```
 
-</details>
 
 ---
 
-<details>
-<summary><strong>8. Interview Questions and Answers</strong></summary>
+8. Interview Questions and Answers
 
 ## Q&A
 
@@ -415,12 +400,10 @@ A: Only with the math formula: `C(m+n-2, m-1)`. The DP approach inherently needs
 **Q: What's the maximum possible answer for m=n=100?**
 A: `C(198, 99)` — an astronomically large number that fits in a 64-bit integer (Java `long` or Python `int`).
 
-</details>
 
 ---
 
-<details>
-<summary><strong>9. Summary</strong></summary>
+9. Summary
 
 ## Summary
 
@@ -441,4 +424,3 @@ A: `C(198, 99)` — an astronomically large number that fits in a 64-bit integer
 - Any "count paths in a grid" problem with restricted movement.
 - Related: Unique Paths II (obstacles), Minimum Path Sum, Triangle, Dungeon Game.
 
-</details>

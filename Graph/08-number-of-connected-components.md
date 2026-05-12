@@ -2,8 +2,7 @@
 
 ---
 
-<details>
-<summary><strong>1. What is meant by Number of Connected Components?</strong></summary>
+1. What is meant by Number of Connected Components?
 
 ## What is Number of Connected Components?
 
@@ -32,12 +31,10 @@ Output: 1
 Explanation: All nodes connected in one component.
 ```
 
-</details>
 
 ---
 
-<details>
-<summary><strong>2. Clarify Requirements — Functional and Non-Functional</strong></summary>
+2. Clarify Requirements — Functional and Non-Functional
 
 ## Requirements
 
@@ -63,12 +60,10 @@ Explanation: All nodes connected in one component.
 - Are edges guaranteed unique? → Yes.
 - Do we need to return the component groups or just the count? → Just the count.
 
-</details>
 
 ---
 
-<details>
-<summary><strong>3. Estimate Time and Space Complexity</strong></summary>
+3. Estimate Time and Space Complexity
 
 ## Complexity Analysis
 
@@ -91,12 +86,10 @@ Explanation: All nodes connected in one component.
 - Component count is maintained automatically.
 - Handles dynamic edge additions efficiently.
 
-</details>
 
 ---
 
-<details>
-<summary><strong>4. Which Algorithm and Why?</strong></summary>
+4. Which Algorithm and Why?
 
 ## Algorithm: Union-Find
 
@@ -127,12 +120,10 @@ for each edge (u, v):
 return components
 ```
 
-</details>
 
 ---
 
-<details>
-<summary><strong>5. High-Level Design — Components and Data Flow</strong></summary>
+5. High-Level Design — Components and Data Flow
 
 ## High-Level Design
 
@@ -173,12 +164,10 @@ No edges processed, components stays at 3.
 Output: 3 ✓
 ```
 
-</details>
 
 ---
 
-<details>
-<summary><strong>6. Java Solution with Comments and Examples</strong></summary>
+6. Java Solution with Comments and Examples
 
 ## Java Implementation
 
@@ -298,12 +287,10 @@ n=1, edges=[]
 Output: 1
 ```
 
-</details>
 
 ---
 
-<details>
-<summary><strong>7. Python Solution with Comments and Examples</strong></summary>
+7. Python Solution with Comments and Examples
 
 ## Python Implementation
 
@@ -415,12 +402,10 @@ if __name__ == "__main__":
   UF: 2, DFS: 2, Expected: 2
 ```
 
-</details>
 
 ---
 
-<details>
-<summary><strong>8. Interview Questions and Answers</strong></summary>
+8. Interview Questions and Answers
 
 ## Q&A
 
@@ -442,12 +427,10 @@ A: Union-Find naturally supports dynamic edge additions — each `union` call ta
 **Q: What is the inverse Ackermann function α(n)?**
 A: It's an extremely slowly growing function — for all practical purposes, α(n) ≤ 4 for any realistic input. So Union-Find operations are effectively O(1) each.
 
-</details>
 
 ---
 
-<details>
-<summary><strong>9. Summary</strong></summary>
+9. Summary
 
 ## Summary
 
@@ -469,4 +452,3 @@ A: It's an extremely slowly growing function — for all practical purposes, α(
 - Related: Graph Valid Tree, Redundant Connection, Number of Islands, Accounts Merge.
 - Union-Find is the go-to data structure whenever "which group does X belong to?" is asked repeatedly.
 
-</details>

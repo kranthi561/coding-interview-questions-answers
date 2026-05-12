@@ -2,8 +2,7 @@
 
 ---
 
-<details>
-<summary><strong>1. What is meant by Meeting Rooms II?</strong></summary>
+1. What is meant by Meeting Rooms II?
 
 ## What is Meeting Rooms II?
 
@@ -31,12 +30,10 @@ Output: 1
 Explanation: [2,4] ends before [7,10] starts → one room suffices.
 ```
 
-</details>
 
 ---
 
-<details>
-<summary><strong>2. Clarify Requirements — Functional and Non-Functional</strong></summary>
+2. Clarify Requirements — Functional and Non-Functional
 
 ## Requirements
 
@@ -62,12 +59,10 @@ Explanation: [2,4] ends before [7,10] starts → one room suffices.
 - Can meetings overlap partially? → Yes — that's the whole challenge.
 - Is input sorted? → No.
 
-</details>
 
 ---
 
-<details>
-<summary><strong>3. Estimate Time and Space Complexity</strong></summary>
+3. Estimate Time and Space Complexity
 
 ## Complexity Analysis
 
@@ -94,12 +89,10 @@ Explanation: [2,4] ends before [7,10] starts → one room suffices.
 
 **The answer = maximum number of meetings happening simultaneously** at any point in time.
 
-</details>
 
 ---
 
-<details>
-<summary><strong>4. Which Algorithm and Why?</strong></summary>
+4. Which Algorithm and Why?
 
 ## Algorithm: Min-Heap of Room End Times
 
@@ -130,12 +123,10 @@ For each meeting [start, end]:
 return heap.size()
 ```
 
-</details>
 
 ---
 
-<details>
-<summary><strong>5. High-Level Design — Components and Data Flow</strong></summary>
+5. High-Level Design — Components and Data Flow
 
 ## High-Level Design
 
@@ -175,12 +166,10 @@ heap=[]
 Output: 1 ✓
 ```
 
-</details>
 
 ---
 
-<details>
-<summary><strong>6. Java Solution with Comments and Examples</strong></summary>
+6. Java Solution with Comments and Examples
 
 ## Java Implementation
 
@@ -284,12 +273,10 @@ public class MeetingRoomsII {
 [[1,4],[4,7],[7,10]] → 1
 ```
 
-</details>
 
 ---
 
-<details>
-<summary><strong>7. Python Solution with Comments and Examples</strong></summary>
+7. Python Solution with Comments and Examples
 
 ## Python Implementation
 
@@ -380,12 +367,10 @@ if __name__ == "__main__":
   Heap: 1, Two-Pointer: 1, Expected: 1
 ```
 
-</details>
 
 ---
 
-<details>
-<summary><strong>8. Interview Questions and Answers</strong></summary>
+8. Interview Questions and Answers
 
 ## Q&A
 
@@ -407,12 +392,10 @@ A: The minimum rooms needed = maximum number of meetings happening simultaneousl
 **Q: When would you prefer two-pointer over min-heap?**
 A: Two-pointer uses O(n) extra space for two sorted arrays but avoids heap overhead. Min-heap is more intuitive for actual room-assignment questions (you can track which meeting is in which room). Both are O(n log n).
 
-</details>
 
 ---
 
-<details>
-<summary><strong>9. Summary</strong></summary>
+9. Summary
 
 ## Summary
 
@@ -433,4 +416,3 @@ A: Two-pointer uses O(n) extra space for two sorted arrays but avoids heap overh
 - Any "minimum resources to cover all intervals" problem.
 - Related: Meeting Rooms (I), Non-overlapping Intervals, Task Scheduler, Car Pooling, Employee Free Time.
 
-</details>

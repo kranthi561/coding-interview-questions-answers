@@ -2,8 +2,7 @@
 
 ---
 
-<details>
-<summary><strong>1. What is meant by Longest Increasing Subsequence?</strong></summary>
+1. What is meant by Longest Increasing Subsequence?
 
 ## What is Longest Increasing Subsequence (LIS)?
 
@@ -27,12 +26,10 @@ Output: 4
 Explanation: LIS is [2, 3, 7, 101] or [2, 5, 7, 101]
 ```
 
-</details>
 
 ---
 
-<details>
-<summary><strong>2. Clarify Requirements — Functional and Non-Functional</strong></summary>
+2. Clarify Requirements — Functional and Non-Functional
 
 ## Requirements
 
@@ -58,12 +55,10 @@ Explanation: LIS is [2, 3, 7, 101] or [2, 5, 7, 101]
 - Can the array have duplicates? → Yes, but they cannot both be in the LIS.
 - Multiple LIS of same length? → Return the length (any one is fine).
 
-</details>
 
 ---
 
-<details>
-<summary><strong>3. Estimate Time and Space Complexity</strong></summary>
+3. Estimate Time and Space Complexity
 
 ## Complexity Analysis
 
@@ -90,12 +85,10 @@ Explanation: LIS is [2, 3, 7, 101] or [2, 5, 7, 101]
 
 **Why O(n log n)?** The `tails` array is always sorted, enabling binary search to find the position to update — O(log n) per element.
 
-</details>
 
 ---
 
-<details>
-<summary><strong>4. Which Algorithm and Why?</strong></summary>
+4. Which Algorithm and Why?
 
 ## Algorithm: Patience Sorting with Binary Search
 
@@ -122,12 +115,10 @@ For each number:
 
 The length of `tails` at the end = LIS length.
 
-</details>
 
 ---
 
-<details>
-<summary><strong>5. High-Level Design — Components and Data Flow</strong></summary>
+5. High-Level Design — Components and Data Flow
 
 ## High-Level Design
 
@@ -157,12 +148,10 @@ Start: tails = []
 LIS length = len(tails) = 4
 ```
 
-</details>
 
 ---
 
-<details>
-<summary><strong>6. Java Solution with Comments and Examples</strong></summary>
+6. Java Solution with Comments and Examples
 
 ## Java Implementation
 
@@ -274,12 +263,10 @@ Input: [5,4,3,2,1]
 Output: 1
 ```
 
-</details>
 
 ---
 
-<details>
-<summary><strong>7. Python Solution with Comments and Examples</strong></summary>
+7. Python Solution with Comments and Examples
 
 ## Python Implementation
 
@@ -365,12 +352,10 @@ if __name__ == "__main__":
   Output: 6, Expected: 6
 ```
 
-</details>
 
 ---
 
-<details>
-<summary><strong>8. Interview Questions and Answers</strong></summary>
+8. Interview Questions and Answers
 
 ## Q&A
 
@@ -392,12 +377,10 @@ A: Yes, but it requires tracking parent pointers — for each element, record wh
 **Q: When would you use O(n²) DP instead of O(n log n)?**
 A: When you need to reconstruct the actual subsequence (parent tracking is simpler with DP), or when n is small and clarity matters more than performance.
 
-</details>
 
 ---
 
-<details>
-<summary><strong>9. Summary</strong></summary>
+9. Summary
 
 ## Summary
 
@@ -419,4 +402,3 @@ A: When you need to reconstruct the actual subsequence (parent tracking is simpl
 - Related: Russian Doll Envelopes, Longest Chain of Pairs, Patience Sorting.
 - Any "longest chain satisfying a monotone constraint" formulation.
 
-</details>

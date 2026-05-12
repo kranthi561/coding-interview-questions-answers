@@ -2,8 +2,7 @@
 
 ---
 
-<details>
-<summary><strong>1. What is meant by Best Time to Buy and Sell Stock?</strong></summary>
+1. What is meant by Best Time to Buy and Sell Stock?
 
 ## What is Best Time to Buy and Sell Stock?
 
@@ -27,12 +26,10 @@ Output: 0
 Explanation: Prices only decrease — no profitable transaction possible.
 ```
 
-</details>
 
 ---
 
-<details>
-<summary><strong>2. Clarify Requirements</strong></summary>
+2. Clarify Requirements
 
 ## Requirements
 
@@ -54,12 +51,10 @@ Explanation: Prices only decrease — no profitable transaction possible.
 - Can prices be negative? → No, prices are non-negative.
 - What if all prices are equal? → Return 0.
 
-</details>
 
 ---
 
-<details>
-<summary><strong>3. Time and Space Complexity</strong></summary>
+3. Time and Space Complexity
 
 ## Complexity Analysis
 
@@ -77,12 +72,10 @@ Explanation: Prices only decrease — no profitable transaction possible.
 
 **Why O(n)?** We track the minimum price seen so far. At each step, profit = current price − min price so far. Update max profit if larger.
 
-</details>
 
 ---
 
-<details>
-<summary><strong>4. Algorithm Choice and Why</strong></summary>
+4. Algorithm Choice and Why
 
 ## Algorithm: Single-Pass with Min Tracking
 
@@ -109,12 +102,10 @@ for each price:
         maxProfit = price - minPrice  ← found a better profit
 ```
 
-</details>
 
 ---
 
-<details>
-<summary><strong>5. High-Level Design</strong></summary>
+5. High-Level Design
 
 ## High-Level Design
 
@@ -145,12 +136,10 @@ Price: 7   1   5   3   6   4
          buy=1       sell=6  → profit=5
 ```
 
-</details>
 
 ---
 
-<details>
-<summary><strong>6. Java Solution with Explanation</strong></summary>
+6. Java Solution with Explanation
 
 ## Java Implementation
 
@@ -215,12 +204,10 @@ Input: [5]
 Output: 0
 ```
 
-</details>
 
 ---
 
-<details>
-<summary><strong>7. Python Solution with Explanation</strong></summary>
+7. Python Solution with Explanation
 
 ## Python Implementation
 
@@ -283,12 +270,10 @@ Input: [3, 3, 3]
 Output: 0
 ```
 
-</details>
 
 ---
 
-<details>
-<summary><strong>8. Interview Q&A</strong></summary>
+8. Interview Q&A
 
 ## Q&A
 
@@ -307,12 +292,10 @@ A: It can be framed as DP (`dp[i] = max profit ending on day i`), but the greedy
 **Q: What happens with negative prices (hypothetically)?**  
 A: The logic still works — `minPrice` would track the most negative, and profit would be calculated correctly. The constraint `prices[i] >= 0` in LeetCode is a simplification.
 
-</details>
 
 ---
 
-<details>
-<summary><strong>9. Summary</strong></summary>
+9. Summary
 
 ## Summary
 
@@ -332,4 +315,3 @@ A: The logic still works — `minPrice` would track the most negative, and profi
 - Sliding window minimum/maximum variants
 - Any "best decision up to this point" problems
 
-</details>

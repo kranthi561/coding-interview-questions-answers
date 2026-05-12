@@ -2,8 +2,7 @@
 
 ---
 
-<details>
-<summary><strong>1. What is meant by Longest Common Subsequence?</strong></summary>
+1. What is meant by Longest Common Subsequence?
 
 ## What is Longest Common Subsequence (LCS)?
 
@@ -26,12 +25,10 @@ Output: 3
 Explanation: LCS is "ace"
 ```
 
-</details>
 
 ---
 
-<details>
-<summary><strong>2. Clarify Requirements — Functional and Non-Functional</strong></summary>
+2. Clarify Requirements — Functional and Non-Functional
 
 ## Requirements
 
@@ -57,12 +54,10 @@ Explanation: LCS is "ace"
 - Can strings be empty? → Constraints say length ≥ 1; but handle defensively.
 - Contiguous or non-contiguous? → Non-contiguous (that's Longest Common Substring for contiguous).
 
-</details>
 
 ---
 
-<details>
-<summary><strong>3. Estimate Time and Space Complexity</strong></summary>
+3. Estimate Time and Space Complexity
 
 ## Complexity Analysis
 
@@ -94,12 +89,10 @@ Explanation: LCS is "ace"
 | **Time** | O(n × m) |
 | **Space** | O(min(n, m)) — only two rows needed |
 
-</details>
 
 ---
 
-<details>
-<summary><strong>4. Which Algorithm and Why?</strong></summary>
+4. Which Algorithm and Why?
 
 ## Algorithm: Bottom-Up 2D Dynamic Programming
 
@@ -126,12 +119,10 @@ else:
 
 Base case: `dp[0][j] = dp[i][0] = 0` (empty string has LCS 0 with anything).
 
-</details>
 
 ---
 
-<details>
-<summary><strong>5. High-Level Design — Components and Data Flow</strong></summary>
+5. High-Level Design — Components and Data Flow
 
 ## High-Level Design
 
@@ -168,12 +159,10 @@ text1[i-1] == text2[j-1]:  dp[i][j] = dp[i-1][j-1] + 1  (diagonal + 1)
 else:                       dp[i][j] = max(dp[i-1][j], dp[i][j-1])  (max of top and left)
 ```
 
-</details>
 
 ---
 
-<details>
-<summary><strong>6. Java Solution with Comments and Examples</strong></summary>
+6. Java Solution with Comments and Examples
 
 ## Java Implementation
 
@@ -281,12 +270,10 @@ text1=AGGTAB, text2=GXTXAYB
 LCS length: 4
 ```
 
-</details>
 
 ---
 
-<details>
-<summary><strong>7. Python Solution with Comments and Examples</strong></summary>
+7. Python Solution with Comments and Examples
 
 ## Python Implementation
 
@@ -380,12 +367,10 @@ text1='AGGTAB', text2='GXTXAYB'
   LCS length: 4, LCS: 'GTAB'
 ```
 
-</details>
 
 ---
 
-<details>
-<summary><strong>8. Interview Questions and Answers</strong></summary>
+8. Interview Questions and Answers
 
 ## Q&A
 
@@ -407,12 +392,10 @@ A: Yes. Edit Distance (Levenshtein) is a generalization. LCS can be used to comp
 **Q: What are real-world applications of LCS?**
 A: Diff tools (git diff), bioinformatics (DNA sequence alignment), plagiarism detection, spell checkers.
 
-</details>
 
 ---
 
-<details>
-<summary><strong>9. Summary</strong></summary>
+9. Summary
 
 ## Summary
 
@@ -433,4 +416,3 @@ A: Diff tools (git diff), bioinformatics (DNA sequence alignment), plagiarism de
 - Any problem comparing two sequences character by character.
 - Related: Edit Distance, Shortest Common Supersequence, Diff algorithms, Sequence Alignment.
 
-</details>

@@ -2,8 +2,7 @@
 
 ---
 
-<details>
-<summary><strong>1. What is meant by Maximum Subarray?</strong></summary>
+1. What is meant by Maximum Subarray?
 
 ## What is Maximum Subarray?
 
@@ -26,12 +25,10 @@ Input:  nums = [5, 4, -1, 7, 8]
 Output: 23
 ```
 
-</details>
 
 ---
 
-<details>
-<summary><strong>2. Clarify Requirements</strong></summary>
+2. Clarify Requirements
 
 ## Requirements
 
@@ -52,12 +49,10 @@ Output: 23
 - Do we need to return the subarray or just its sum? → Just the sum.
 - Is an empty subarray valid? → No, at least one element required.
 
-</details>
 
 ---
 
-<details>
-<summary><strong>3. Time and Space Complexity</strong></summary>
+3. Time and Space Complexity
 
 ## Complexity Analysis
 
@@ -69,12 +64,10 @@ Output: 23
 
 **Kadane's** is optimal — single pass, constant space.
 
-</details>
 
 ---
 
-<details>
-<summary><strong>4. Algorithm Choice and Why</strong></summary>
+4. Algorithm Choice and Why
 
 ## Algorithm: Kadane's Algorithm
 
@@ -94,12 +87,10 @@ Track the global maximum throughout.
 ### Why Not Divide and Conquer?
 Correct but O(n log n) — Kadane's is simpler and O(n).
 
-</details>
 
 ---
 
-<details>
-<summary><strong>5. High-Level Design</strong></summary>
+5. High-Level Design
 
 ## High-Level Design
 
@@ -120,12 +111,10 @@ i=8: num=4  → curr=max(4, 1+4)=5,     maxSum=6
 Result: 6
 ```
 
-</details>
 
 ---
 
-<details>
-<summary><strong>6. Java Solution with Explanation</strong></summary>
+6. Java Solution with Explanation
 
 ## Java Implementation
 
@@ -171,12 +160,10 @@ public class MaximumSubarray {
 -1
 ```
 
-</details>
 
 ---
 
-<details>
-<summary><strong>7. Python Solution with Explanation</strong></summary>
+7. Python Solution with Explanation
 
 ## Python Implementation
 
@@ -215,12 +202,10 @@ if __name__ == "__main__":
 -1
 ```
 
-</details>
 
 ---
 
-<details>
-<summary><strong>8. Interview Q&A</strong></summary>
+8. Interview Q&A
 
 ## Q&A
 
@@ -236,12 +221,10 @@ A: Yes. `dp[i] = max subarray sum ending at index i`. The recurrence is `dp[i] =
 **Q: Can this be solved with divide and conquer?**  
 A: Yes. Split in half; max subarray is either in left half, right half, or crosses midpoint. O(n log n) time.
 
-</details>
 
 ---
 
-<details>
-<summary><strong>9. Summary</strong></summary>
+9. Summary
 
 ## Summary
 
@@ -256,4 +239,3 @@ A: Yes. Split in half; max subarray is either in left half, right half, or cross
 ### Core Pattern
 > Greedy local decision: at each step, is the current element alone better than extending the previous subarray?
 
-</details>

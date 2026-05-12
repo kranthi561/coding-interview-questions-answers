@@ -2,8 +2,7 @@
 
 ---
 
-<details>
-<summary><strong>1. What is meant by House Robber II?</strong></summary>
+1. What is meant by House Robber II?
 
 ## What is House Robber II?
 
@@ -27,12 +26,10 @@ Output: 3
 Explanation: Rob house 1 (3). Cannot rob both 0 and 2 (they're adjacent via circle).
 ```
 
-</details>
 
 ---
 
-<details>
-<summary><strong>2. Clarify Requirements — Functional and Non-Functional</strong></summary>
+2. Clarify Requirements — Functional and Non-Functional
 
 ## Requirements
 
@@ -58,12 +55,10 @@ Explanation: Rob house 1 (3). Cannot rob both 0 and 2 (they're adjacent via circ
 - Can all values be 0? → Yes, return 0.
 - Same adjacency rules as House Robber I? → Yes.
 
-</details>
 
 ---
 
-<details>
-<summary><strong>3. Estimate Time and Space Complexity</strong></summary>
+3. Estimate Time and Space Complexity
 
 ## Complexity Analysis
 
@@ -83,12 +78,10 @@ Explanation: Rob house 1 (3). Cannot rob both 0 and 2 (they're adjacent via circ
 
 **Why O(n)?** The circular constraint is handled by running the linear House Robber twice on overlapping subarrays — each pass is O(n).
 
-</details>
 
 ---
 
-<details>
-<summary><strong>4. Which Algorithm and Why?</strong></summary>
+4. Which Algorithm and Why?
 
 ## Algorithm: Two-Pass Linear DP
 
@@ -118,12 +111,10 @@ If neither is included, both runs would still find the correct subset.
 | Brute Force | Yes | O(2ⁿ) | O(n) | No |
 | **Two-Pass Linear DP** | **Yes** | **O(n)** | **O(1)** | **Yes** |
 
-</details>
 
 ---
 
-<details>
-<summary><strong>5. High-Level Design — Components and Data Flow</strong></summary>
+5. High-Level Design — Components and Data Flow
 
 ## High-Level Design
 
@@ -154,12 +145,10 @@ Pass 2: rob(nums[1..2]) = rob([3, 2])
 Output: max(3, 3) = 3
 ```
 
-</details>
 
 ---
 
-<details>
-<summary><strong>6. Java Solution with Comments and Examples</strong></summary>
+6. Java Solution with Comments and Examples
 
 ## Java Implementation
 
@@ -251,12 +240,10 @@ Input: [4,4,4,4]
 Output: 8
 ```
 
-</details>
 
 ---
 
-<details>
-<summary><strong>7. Python Solution with Comments and Examples</strong></summary>
+7. Python Solution with Comments and Examples
 
 ## Python Implementation
 
@@ -323,12 +310,10 @@ if __name__ == "__main__":
 [PASS] nums=[1, 1, 1, 2] → Output: 3, Expected: 3
 ```
 
-</details>
 
 ---
 
-<details>
-<summary><strong>8. Interview Questions and Answers</strong></summary>
+8. Interview Questions and Answers
 
 ## Q&A
 
@@ -350,12 +335,10 @@ A: Each node has two children. DFS returns a pair: `(rob_this_node, skip_this_no
 **Q: Can you solve this in a single pass?**
 A: Not directly without extra tracking, because the circular constraint depends on a global choice (include house 0 or not). Two passes is the standard clean approach.
 
-</details>
 
 ---
 
-<details>
-<summary><strong>9. Summary</strong></summary>
+9. Summary
 
 ## Summary
 
@@ -376,4 +359,3 @@ A: Not directly without extra tracking, because the circular constraint depends 
 - Circular variants of linear DP problems.
 - Related: House Robber I (linear), House Robber III (tree), Jump Game II, Circular Array Loop.
 
-</details>

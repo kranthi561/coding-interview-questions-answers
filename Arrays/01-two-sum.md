@@ -27,8 +27,6 @@ Output: [0, 1]
 Explanation: nums[0] + nums[1] = 2 + 7 = 9
 ```
 
-
-
 ---
 
 **2. Clarify Requirements**

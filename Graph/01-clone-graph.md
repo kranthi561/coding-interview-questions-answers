@@ -2,8 +2,7 @@
 
 ---
 
-<details>
-<summary><strong>1. What is meant by Clone Graph?</strong></summary>
+1. What is meant by Clone Graph?
 
 ## What is Clone Graph?
 
@@ -32,12 +31,10 @@ Input:  adjList = [[2,4],[1,3],[2,4],[1,3]]
 Output: A deep copy with the same adjacency structure.
 ```
 
-</details>
 
 ---
 
-<details>
-<summary><strong>2. Clarify Requirements — Functional and Non-Functional</strong></summary>
+2. Clarify Requirements — Functional and Non-Functional
 
 ## Requirements
 
@@ -63,12 +60,10 @@ Output: A deep copy with the same adjacency structure.
 - Can the input be null? → Yes — return null.
 - Are there self-loops? → No per constraints.
 
-</details>
 
 ---
 
-<details>
-<summary><strong>3. Estimate Time and Space Complexity</strong></summary>
+3. Estimate Time and Space Complexity
 
 ## Complexity Analysis
 
@@ -85,12 +80,10 @@ Output: A deep copy with the same adjacency structure.
 
 Cycles would cause infinite recursion/traversal without the visited map.
 
-</details>
 
 ---
 
-<details>
-<summary><strong>4. Which Algorithm and Why?</strong></summary>
+4. Which Algorithm and Why?
 
 ## Algorithm: BFS with HashMap
 
@@ -121,12 +114,10 @@ Use a `HashMap<Node, Node>` (original → clone) to:
       - Add clone of neighbor to clone node's neighbor list.
 ```
 
-</details>
 
 ---
 
-<details>
-<summary><strong>5. High-Level Design — Components and Data Flow</strong></summary>
+5. High-Level Design — Components and Data Flow
 
 ## High-Level Design
 
@@ -159,12 +150,10 @@ Queue: [1]
 Return: clone of node 1 = 1'
 ```
 
-</details>
 
 ---
 
-<details>
-<summary><strong>6. Java Solution with Comments and Examples</strong></summary>
+6. Java Solution with Comments and Examples
 
 ## Java Implementation
 
@@ -291,12 +280,10 @@ Single node val: 7
 Single node neighbors: []
 ```
 
-</details>
 
 ---
 
-<details>
-<summary><strong>7. Python Solution with Comments and Examples</strong></summary>
+7. Python Solution with Comments and Examples
 
 ## Python Implementation
 
@@ -400,12 +387,10 @@ Null input: None
 Single: val=5, neighbors=[]
 ```
 
-</details>
 
 ---
 
-<details>
-<summary><strong>8. Interview Questions and Answers</strong></summary>
+8. Interview Questions and Answers
 
 ## Q&A
 
@@ -427,12 +412,10 @@ A: A shallow copy would create new node objects but share the same neighbor list
 **Q: Can we solve this without a HashMap?**
 A: Not cleanly for cyclic graphs. For acyclic graphs (trees), we could use recursion without a map. For general graphs, the map is essential.
 
-</details>
 
 ---
 
-<details>
-<summary><strong>9. Summary</strong></summary>
+9. Summary
 
 ## Summary
 
@@ -453,4 +436,3 @@ A: Not cleanly for cyclic graphs. For acyclic graphs (trees), we could use recur
 - Any graph deep copy / serialization task.
 - Related: Serialize and Deserialize Binary Tree, Graph traversal with memoization.
 
-</details>

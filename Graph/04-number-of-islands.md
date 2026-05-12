@@ -2,8 +2,7 @@
 
 ---
 
-<details>
-<summary><strong>1. What is meant by Number of Islands?</strong></summary>
+1. What is meant by Number of Islands?
 
 ## What is Number of Islands?
 
@@ -31,12 +30,10 @@ grid = [["1","1","0","0","0"],
 Output: 3
 ```
 
-</details>
 
 ---
 
-<details>
-<summary><strong>2. Clarify Requirements — Functional and Non-Functional</strong></summary>
+2. Clarify Requirements — Functional and Non-Functional
 
 ## Requirements
 
@@ -62,12 +59,10 @@ Output: 3
 - Can the grid be empty? → Constraints say m,n ≥ 1.
 - Are there other values in the grid? → Only '0' and '1'.
 
-</details>
 
 ---
 
-<details>
-<summary><strong>3. Estimate Time and Space Complexity</strong></summary>
+3. Estimate Time and Space Complexity
 
 ## Complexity Analysis
 
@@ -87,12 +82,10 @@ Output: 3
 
 **DFS is standard** for simplicity. Union-Find is useful when cells are added dynamically (stream of updates).
 
-</details>
 
 ---
 
-<details>
-<summary><strong>4. Which Algorithm and Why?</strong></summary>
+4. Which Algorithm and Why?
 
 ## Algorithm: DFS Flood Fill
 
@@ -110,12 +103,10 @@ For every unvisited `'1'` cell, increment the island count and flood-fill the en
 
 This ensures each island is counted exactly once and each cell is processed at most once.
 
-</details>
 
 ---
 
-<details>
-<summary><strong>5. High-Level Design — Components and Data Flow</strong></summary>
+5. High-Level Design — Components and Data Flow
 
 ## High-Level Design
 
@@ -147,12 +138,10 @@ Scan row by row:
 Output: 3
 ```
 
-</details>
 
 ---
 
-<details>
-<summary><strong>6. Java Solution with Comments and Examples</strong></summary>
+6. Java Solution with Comments and Examples
 
 ## Java Implementation
 
@@ -270,12 +259,10 @@ Example 3: 0
 Example 4: 1
 ```
 
-</details>
 
 ---
 
-<details>
-<summary><strong>7. Python Solution with Comments and Examples</strong></summary>
+7. Python Solution with Comments and Examples
 
 ## Python Implementation
 
@@ -375,12 +362,10 @@ if __name__ == "__main__":
 [PASS] Output: 1, Expected: 1
 ```
 
-</details>
 
 ---
 
-<details>
-<summary><strong>8. Interview Questions and Answers</strong></summary>
+8. Interview Questions and Answers
 
 ## Q&A
 
@@ -402,12 +387,10 @@ A: In the worst case (all cells are '1'), DFS visits all m×n cells. In Python, 
 **Q: How is this related to connected components in a graph?**
 A: Each island is a connected component in the implicit graph where land cells are nodes and adjacency defines edges. Counting islands = counting connected components.
 
-</details>
 
 ---
 
-<details>
-<summary><strong>9. Summary</strong></summary>
+9. Summary
 
 ## Summary
 
@@ -428,4 +411,3 @@ A: Each island is a connected component in the implicit graph where land cells a
 - Counting connected components in a grid.
 - Related: Max Area of Island, Surrounded Regions, Pacific Atlantic Water Flow, Word Search.
 
-</details>

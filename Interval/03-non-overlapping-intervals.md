@@ -2,8 +2,7 @@
 
 ---
 
-<details>
-<summary><strong>1. What is meant by Non-overlapping Intervals?</strong></summary>
+1. What is meant by Non-overlapping Intervals?
 
 ## What is Non-overlapping Intervals?
 
@@ -29,12 +28,10 @@ Output: 2
 Explanation: Remove 2 of the 3 identical intervals.
 ```
 
-</details>
 
 ---
 
-<details>
-<summary><strong>2. Clarify Requirements — Functional and Non-Functional</strong></summary>
+2. Clarify Requirements — Functional and Non-Functional
 
 ## Requirements
 
@@ -60,12 +57,10 @@ Explanation: Remove 2 of the 3 identical intervals.
 - Can intervals be negative? → Yes.
 - Is the input sorted? → No.
 
-</details>
 
 ---
 
-<details>
-<summary><strong>3. Estimate Time and Space Complexity</strong></summary>
+3. Estimate Time and Space Complexity
 
 ## Complexity Analysis
 
@@ -87,12 +82,10 @@ Answer = `n - LIS_length` where LIS = longest non-overlapping subsequence.
 
 **Why O(n log n)?** Sorting is the dominant cost. The greedy scan is O(n).
 
-</details>
 
 ---
 
-<details>
-<summary><strong>4. Which Algorithm and Why?</strong></summary>
+4. Which Algorithm and Why?
 
 ## Algorithm: Greedy — Sort by End Time, Keep Earliest-Ending
 
@@ -117,12 +110,10 @@ This is the classic **Activity Selection Problem**. Greedy proof:
 **Why sort by end (not start)?**  
 Sorting by end ensures that among overlapping intervals, we always keep the one that ends soonest, which is the greedy optimal choice.
 
-</details>
 
 ---
 
-<details>
-<summary><strong>5. High-Level Design — Components and Data Flow</strong></summary>
+5. High-Level Design — Components and Data Flow
 
 ## High-Level Design
 
@@ -161,12 +152,10 @@ lastEnd=-∞
 Output: 2
 ```
 
-</details>
 
 ---
 
-<details>
-<summary><strong>6. Java Solution with Comments and Examples</strong></summary>
+6. Java Solution with Comments and Examples
 
 ## Java Implementation
 
@@ -245,12 +234,10 @@ public class NonOverlappingIntervals {
 [[1,5]] → 0
 ```
 
-</details>
 
 ---
 
-<details>
-<summary><strong>7. Python Solution with Comments and Examples</strong></summary>
+7. Python Solution with Comments and Examples
 
 ## Python Implementation
 
@@ -315,12 +302,10 @@ if __name__ == "__main__":
 [PASS] intervals=[[-52, 31], [-73, -26], [82, 97]]... → Output: 7, Expected: 7
 ```
 
-</details>
 
 ---
 
-<details>
-<summary><strong>8. Interview Questions and Answers</strong></summary>
+8. Interview Questions and Answers
 
 ## Q&A
 
@@ -339,12 +324,10 @@ A: `min_removals = n - max_non_overlapping`. The greedy solution for max non-ove
 **Q: Why does this greedy fail if sorted by start time?**
 A: Consider `[[1,100],[2,3],[3,4]]`. Sorted by start: `[1,100],[2,3],[3,4]`. Greedy by start would keep `[1,100]` first and remove both others (2 removals). But the optimal is to remove `[1,100]` and keep `[2,3],[3,4]` (1 removal). Sorting by end prevents this mistake.
 
-</details>
 
 ---
 
-<details>
-<summary><strong>9. Summary</strong></summary>
+9. Summary
 
 ## Summary
 
@@ -365,4 +348,3 @@ A: Consider `[[1,100],[2,3],[3,4]]`. Sorted by start: `[1,100],[2,3],[3,4]`. Gre
 - Interval scheduling / activity selection problems.
 - Related: Meeting Rooms II, Minimum Number of Arrows to Burst Balloons, Task Scheduler.
 
-</details>

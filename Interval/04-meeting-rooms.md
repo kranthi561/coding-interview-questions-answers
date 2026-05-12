@@ -2,8 +2,7 @@
 
 ---
 
-<details>
-<summary><strong>1. What is meant by Meeting Rooms?</strong></summary>
+1. What is meant by Meeting Rooms?
 
 ## What is Meeting Rooms?
 
@@ -30,12 +29,10 @@ Output: true
 Explanation: After sorting: [2,4] and [7,10] — no overlap.
 ```
 
-</details>
 
 ---
 
-<details>
-<summary><strong>2. Clarify Requirements — Functional and Non-Functional</strong></summary>
+2. Clarify Requirements — Functional and Non-Functional
 
 ## Requirements
 
@@ -61,12 +58,10 @@ Explanation: After sorting: [2,4] and [7,10] — no overlap.
 - Is the input sorted? → Not necessarily.
 - Can meetings have zero duration? → Constraints say `start < end`, so no.
 
-</details>
 
 ---
 
-<details>
-<summary><strong>3. Estimate Time and Space Complexity</strong></summary>
+3. Estimate Time and Space Complexity
 
 ## Complexity Analysis
 
@@ -88,12 +83,10 @@ Explanation: After sorting: [2,4] and [7,10] — no overlap.
 
 **Can we do O(n)?** Only if the input is already sorted. Sorting is required in the general case.
 
-</details>
 
 ---
 
-<details>
-<summary><strong>4. Which Algorithm and Why?</strong></summary>
+4. Which Algorithm and Why?
 
 ## Algorithm: Sort by Start Time + Linear Overlap Check
 
@@ -120,12 +113,10 @@ return true
 **Why check only consecutive pairs?**  
 In a sorted list, if `A` and `C` overlap but are not adjacent (B is between them), then either `B` overlaps with `A` or `B` overlaps with `C` — the consecutive check catches the conflict anyway.
 
-</details>
 
 ---
 
-<details>
-<summary><strong>5. High-Level Design — Components and Data Flow</strong></summary>
+5. High-Level Design — Components and Data Flow
 
 ## High-Level Design
 
@@ -167,12 +158,10 @@ i=2: 10 >= 10 → OK
 return true ✓
 ```
 
-</details>
 
 ---
 
-<details>
-<summary><strong>6. Java Solution with Comments and Examples</strong></summary>
+6. Java Solution with Comments and Examples
 
 ## Java Implementation
 
@@ -252,12 +241,10 @@ public class MeetingRooms {
 [[1,10],[1,10]] → false
 ```
 
-</details>
 
 ---
 
-<details>
-<summary><strong>7. Python Solution with Comments and Examples</strong></summary>
+7. Python Solution with Comments and Examples
 
 ## Python Implementation
 
@@ -319,12 +306,10 @@ if __name__ == "__main__":
 [PASS] intervals=[[1, 4], [2, 5], [7, 9]] → Output: False, Expected: False
 ```
 
-</details>
 
 ---
 
-<details>
-<summary><strong>8. Interview Questions and Answers</strong></summary>
+8. Interview Questions and Answers
 
 ## Q&A
 
@@ -346,12 +331,10 @@ A: Meeting Rooms (I) asks "can one person attend all?" — a binary answer. Meet
 **Q: Can this be solved in O(n)?**
 A: Only if the input is already sorted. For unsorted input, any algorithm must sort or use a hash/bucket approach (which has high constants for large ranges).
 
-</details>
 
 ---
 
-<details>
-<summary><strong>9. Summary</strong></summary>
+9. Summary
 
 ## Summary
 
@@ -372,4 +355,3 @@ A: Only if the input is already sorted. For unsorted input, any algorithm must s
 - Detecting any overlap in an interval set.
 - Related: Meeting Rooms II (room count), Non-overlapping Intervals, Merge Intervals.
 
-</details>

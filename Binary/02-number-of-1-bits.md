@@ -2,8 +2,7 @@
 
 ---
 
-<details>
-<summary><strong>1. What is meant by Number of 1 Bits?</strong></summary>
+1. What is meant by Number of 1 Bits?
 
 ## What is Number of 1 Bits?
 
@@ -22,12 +21,10 @@ Input:  n = 11111111111111111111111111111101  (decimal: 4294967293)
 Output: 31
 ```
 
-</details>
 
 ---
 
-<details>
-<summary><strong>2. Clarify Requirements</strong></summary>
+2. Clarify Requirements
 
 ## Requirements
 
@@ -48,12 +45,10 @@ Output: 31
 - Can the input be negative (signed)? → Treated as unsigned 32-bit.
 - Do we need the positions of the 1 bits or just the count? → Just the count.
 
-</details>
 
 ---
 
-<details>
-<summary><strong>3. Time and Space Complexity</strong></summary>
+3. Time and Space Complexity
 
 ## Complexity Analysis
 
@@ -67,12 +62,10 @@ Output: 31
 
 **Brian Kernighan is preferred** because it iterates only `k` times where `k` = number of set bits — faster for sparse inputs.
 
-</details>
 
 ---
 
-<details>
-<summary><strong>4. Algorithm Choice and Why</strong></summary>
+4. Algorithm Choice and Why
 
 ## Algorithm: Brian Kernighan's Bit Trick — `n & (n-1)`
 
@@ -103,12 +96,10 @@ Always 32 iterations regardless of how many bits are set.
 ### Why Brian Kernighan?
 For numbers with few 1 bits, it's faster — only `k` iterations instead of always 32.
 
-</details>
 
 ---
 
-<details>
-<summary><strong>5. High-Level Design</strong></summary>
+5. High-Level Design
 
 ## High-Level Design
 
@@ -138,12 +129,10 @@ Result: 3
     └────── cleared in step 3
 ```
 
-</details>
 
 ---
 
-<details>
-<summary><strong>6. Java Solution with Explanation</strong></summary>
+6. Java Solution with Explanation
 
 ## Java Implementation
 
@@ -209,12 +198,10 @@ n=0:          0
 
 > **Note:** Java's `int` is signed. For unsigned 32-bit behavior, use `>>>` (unsigned right shift) instead of `>>`. The `n & (n-1)` approach works correctly for both signed and unsigned inputs.
 
-</details>
 
 ---
 
-<details>
-<summary><strong>7. Python Solution with Explanation</strong></summary>
+7. Python Solution with Explanation
 
 ## Python Implementation
 
@@ -261,12 +248,10 @@ n=0:          0
 Built-in: n=11 → 3
 ```
 
-</details>
 
 ---
 
-<details>
-<summary><strong>8. Interview Q&A</strong></summary>
+8. Interview Q&A
 
 ## Q&A
 
@@ -285,12 +270,10 @@ A: Yes — using a **lookup table** approach: split the 32-bit number into four 
 **Q: What's the built-in way in Java and Python?**
 A: Java: `Integer.bitCount(n)`. Python: `bin(n).count('1')` or `n.bit_count()` (Python 3.10+).
 
-</details>
 
 ---
 
-<details>
-<summary><strong>9. Summary</strong></summary>
+9. Summary
 
 ## Summary
 
@@ -310,4 +293,3 @@ A: Java: `Integer.bitCount(n)`. Python: `bin(n).count('1')` or `n.bit_count()` (
 - Checking if a number is a power of 2: `n > 0 && (n & (n-1)) == 0`
 - Finding the lowest set bit: `n & (-n)`
 
-</details>

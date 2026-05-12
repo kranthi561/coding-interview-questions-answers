@@ -2,8 +2,7 @@
 
 ---
 
-<details>
-<summary><strong>1. What is meant by Insert Interval?</strong></summary>
+1. What is meant by Insert Interval?
 
 ## What is Insert Interval?
 
@@ -32,12 +31,10 @@ Output: [[1,2],[3,10],[12,16]]
 Explanation: [3,5],[6,7],[8,10] all overlap with [4,8] → merge to [3,10]
 ```
 
-</details>
 
 ---
 
-<details>
-<summary><strong>2. Clarify Requirements — Functional and Non-Functional</strong></summary>
+2. Clarify Requirements — Functional and Non-Functional
 
 ## Requirements
 
@@ -64,12 +61,10 @@ Explanation: [3,5],[6,7],[8,10] all overlap with [4,8] → merge to [3,10]
 - Can the new interval be a duplicate? → Yes, must still merge correctly.
 - What defines overlap? → `[a,b]` and `[c,d]` overlap if `a <= d && c <= b`.
 
-</details>
 
 ---
 
-<details>
-<summary><strong>3. Estimate Time and Space Complexity</strong></summary>
+3. Estimate Time and Space Complexity
 
 ## Complexity Analysis
 
@@ -92,12 +87,10 @@ Explanation: [3,5],[6,7],[8,10] all overlap with [4,8] → merge to [3,10]
 2. Intervals that **overlap** with the new interval (merge into one).
 3. Intervals that come **after** the new interval (no overlap).
 
-</details>
 
 ---
 
-<details>
-<summary><strong>4. Which Algorithm and Why?</strong></summary>
+4. Which Algorithm and Why?
 
 ## Algorithm: Single-Pass Linear Scan
 
@@ -131,12 +124,10 @@ Remaining intervals → add directly to result
 
 At the end of Phase 1 / start of Phase 3, insert the (possibly expanded) `newInterval`.
 
-</details>
 
 ---
 
-<details>
-<summary><strong>5. High-Level Design — Components and Data Flow</strong></summary>
+5. High-Level Design — Components and Data Flow
 
 ## High-Level Design
 
@@ -171,12 +162,10 @@ Phase 3 — starts after 10:
 Result: [[1,2],[3,10],[12,16]]
 ```
 
-</details>
 
 ---
 
-<details>
-<summary><strong>6. Java Solution with Comments and Examples</strong></summary>
+6. Java Solution with Comments and Examples
 
 ## Java Implementation
 
@@ -266,12 +255,10 @@ Example 5: [[1, 2], [3, 5], [7, 9]]
 Example 6: [[0, 10]]
 ```
 
-</details>
 
 ---
 
-<details>
-<summary><strong>7. Python Solution with Comments and Examples</strong></summary>
+7. Python Solution with Comments and Examples
 
 ## Python Implementation
 
@@ -345,12 +332,10 @@ if __name__ == "__main__":
 [PASS] new=[0, 10] → [[0, 10]]
 ```
 
-</details>
 
 ---
 
-<details>
-<summary><strong>8. Interview Questions and Answers</strong></summary>
+8. Interview Questions and Answers
 
 ## Q&A
 
@@ -372,12 +357,10 @@ A: Phase 2 catches it — the existing interval's start ≤ newInterval's end, s
 **Q: What if intervals is empty?**
 A: Phase 1, 2, and 3 all skip. Only `result.add(newInterval)` runs. Returns `[[newInterval]]`.
 
-</details>
 
 ---
 
-<details>
-<summary><strong>9. Summary</strong></summary>
+9. Summary
 
 ## Summary
 
@@ -398,4 +381,3 @@ A: Phase 1, 2, and 3 all skip. Only `result.add(newInterval)` runs. Returns `[[n
 - Inserting into a sorted interval structure with merge.
 - Related: Merge Intervals, Interval List Intersections, Calendar scheduling.
 
-</details>

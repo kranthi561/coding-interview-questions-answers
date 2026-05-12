@@ -2,8 +2,7 @@
 
 ---
 
-<details>
-<summary><strong>1. What is meant by Combination Sum?</strong></summary>
+1. What is meant by Combination Sum?
 
 ## What is Combination Sum?
 
@@ -29,12 +28,10 @@ Output: [[2, 2, 3], [7]]
 Explanation: 2+2+3=7, 7=7
 ```
 
-</details>
 
 ---
 
-<details>
-<summary><strong>2. Clarify Requirements — Functional and Non-Functional</strong></summary>
+2. Clarify Requirements — Functional and Non-Functional
 
 ## Requirements
 
@@ -61,12 +58,10 @@ Explanation: 2+2+3=7, 7=7
 - Are candidates guaranteed to be distinct? → Yes.
 - Return count or actual combinations? → Actual combinations.
 
-</details>
 
 ---
 
-<details>
-<summary><strong>3. Estimate Time and Space Complexity</strong></summary>
+3. Estimate Time and Space Complexity
 
 ## Complexity Analysis
 
@@ -91,12 +86,10 @@ With candidate values ≥ 2 and target ≤ 40:
 
 Sorting candidates allows early pruning: once a candidate exceeds the remaining target, skip all remaining (they're larger too). This significantly reduces actual runtime.
 
-</details>
 
 ---
 
-<details>
-<summary><strong>4. Which Algorithm and Why?</strong></summary>
+4. Which Algorithm and Why?
 
 ## Algorithm: Backtracking with Start Index
 
@@ -129,12 +122,10 @@ backtrack(start=0, remaining=target, current=[]):
         current.remove(last)  // backtrack
 ```
 
-</details>
 
 ---
 
-<details>
-<summary><strong>5. High-Level Design — Components and Data Flow</strong></summary>
+5. High-Level Design — Components and Data Flow
 
 ## High-Level Design
 
@@ -166,12 +157,10 @@ backtrack(start=0, rem=7, path=[])
 └── pick 7 → backtrack(start=3, rem=0, path=[7]) ✓ FOUND!
 ```
 
-</details>
 
 ---
 
-<details>
-<summary><strong>6. Java Solution with Comments and Examples</strong></summary>
+6. Java Solution with Comments and Examples
 
 ## Java Implementation
 
@@ -260,12 +249,10 @@ candidates=[5], target=5
 Output: [[5]]
 ```
 
-</details>
 
 ---
 
-<details>
-<summary><strong>7. Python Solution with Comments and Examples</strong></summary>
+7. Python Solution with Comments and Examples
 
 ## Python Implementation
 
@@ -338,12 +325,10 @@ candidates=[5], target=5
   Output: [[5]]
 ```
 
-</details>
 
 ---
 
-<details>
-<summary><strong>8. Interview Questions and Answers</strong></summary>
+8. Interview Questions and Answers
 
 ## Q&A
 
@@ -362,12 +347,10 @@ A: Because `path` is a mutable list that gets modified as we backtrack. If we ap
 **Q: What is the difference between Combination Sum and Subset Sum?**
 A: Subset Sum asks "can we reach the target?" (boolean). Combination Sum asks "give all ways to reach the target" (enumeration). Combination Sum also allows element reuse; standard Subset Sum does not.
 
-</details>
 
 ---
 
-<details>
-<summary><strong>9. Summary</strong></summary>
+9. Summary
 
 ## Summary
 
@@ -388,4 +371,3 @@ A: Subset Sum asks "can we reach the target?" (boolean). Combination Sum asks "g
 - Enumerate all subsets/combinations satisfying a constraint.
 - Related: Combination Sum II (no reuse), Subset Sum, Permutations, Subsets.
 
-</details>

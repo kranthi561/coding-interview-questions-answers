@@ -2,8 +2,7 @@
 
 ---
 
-<details>
-<summary><strong>1. What is meant by Search in Rotated Sorted Array?</strong></summary>
+1. What is meant by Search in Rotated Sorted Array?
 
 ## What is Search in Rotated Sorted Array?
 
@@ -27,12 +26,10 @@ Input:  nums = [1], target = 0
 Output: -1
 ```
 
-</details>
 
 ---
 
-<details>
-<summary><strong>2. Clarify Requirements</strong></summary>
+2. Clarify Requirements
 
 ## Requirements
 
@@ -53,12 +50,10 @@ Output: -1
 - Can `target` equal multiple elements? → No duplicates guaranteed.
 - What if array has one element? → Check it directly.
 
-</details>
 
 ---
 
-<details>
-<summary><strong>3. Time and Space Complexity</strong></summary>
+3. Time and Space Complexity
 
 ## Complexity Analysis
 
@@ -67,12 +62,10 @@ Output: -1
 | Linear scan | O(n) | O(1) |
 | **Modified Binary Search** | **O(log n)** | **O(1)** |
 
-</details>
 
 ---
 
-<details>
-<summary><strong>4. Algorithm Choice and Why</strong></summary>
+4. Algorithm Choice and Why
 
 ## Algorithm: Modified Binary Search
 
@@ -93,12 +86,10 @@ Else:  (right half is sorted)
         → search left half
 ```
 
-</details>
 
 ---
 
-<details>
-<summary><strong>5. High-Level Design</strong></summary>
+5. High-Level Design
 
 ## High-Level Design
 
@@ -125,12 +116,10 @@ left=4, right=4 → loop ends
 nums[4] = 0 == target → return 4
 ```
 
-</details>
 
 ---
 
-<details>
-<summary><strong>6. Java Solution with Explanation</strong></summary>
+6. Java Solution with Explanation
 
 ## Java Implementation
 
@@ -195,12 +184,10 @@ public class SearchInRotatedSortedArray {
 1
 ```
 
-</details>
 
 ---
 
-<details>
-<summary><strong>7. Python Solution with Explanation</strong></summary>
+7. Python Solution with Explanation
 
 ## Python Implementation
 
@@ -252,12 +239,10 @@ if __name__ == "__main__":
 1
 ```
 
-</details>
 
 ---
 
-<details>
-<summary><strong>8. Interview Q&A</strong></summary>
+8. Interview Q&A
 
 ## Q&A
 
@@ -273,12 +258,10 @@ A: When `nums[left] == nums[mid]`, we can't determine which half is sorted. We'd
 **Q: Can we first find the pivot, then do two binary searches?**  
 A: Yes, that's a valid O(log n) two-pass approach. But the single-pass method described here is cleaner and just as fast.
 
-</details>
 
 ---
 
-<details>
-<summary><strong>9. Summary</strong></summary>
+9. Summary
 
 ## Summary
 
@@ -290,4 +273,3 @@ A: Yes, that's a valid O(log n) two-pass approach. But the single-pass method de
 | **Space Complexity** | O(1) |
 | **Key Insight** | One half is always sorted — check if target is in the sorted half |
 
-</details>
